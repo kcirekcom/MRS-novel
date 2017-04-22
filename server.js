@@ -1,11 +1,15 @@
 'use strict';
 
+const dotenv = require('dotenv');
 const express = require('express');
+
+dotenv.load();
+
+const PORT = process.env.PORT;
 const app = express();
-const PORT = process.env.PORT || 8080;
 
 app.use(express.static(`${__dirname}/build`));
 
-app.listen(PORT, function() {
-  console.log(`server up:, ${PORT}`);
+app.listen(PORT, () => {
+  console.log(`server up: ${PORT}`);
 });
