@@ -61,12 +61,12 @@ function manuscriptService($q, $log, $http, authService) {
     });
   };
 
-  service.updateManuscript = function(manuscriptID, manuscriptData) {
+  service.updateManuscript = function(manuscriptData) {
     $log.debug('manuscriptService.updateManuscript()');
 
     return authService.getToken()
     .then(token => {
-      let url = `${__API_URL__}/api/manuscript/${manuscriptID}`; //eslint-disable-line
+      let url = `${__API_URL__}/api/manuscript/${manuscriptData._id}`; //eslint-disable-line
       let config = {
         headers: {
           Accept: 'application/json',
@@ -80,7 +80,7 @@ function manuscriptService($q, $log, $http, authService) {
     .then(res => {
       for (let i = 0; i < service.manuscripts.length; i++) {
         let current = service.manuscripts[i];
-        if (current._id === manuscriptID) {
+        if (current._id === manuscriptData._id) {
           service.manuscripts[i] = res.data;
           break;
         }
@@ -94,12 +94,12 @@ function manuscriptService($q, $log, $http, authService) {
     });
   };
 
-  service.deleteManuscript = function(manuscriptID) {
+  service.deleteManuscript = function(manuscriptData) {
     $log.debug('manuscriptService.deleteManuscript()');
 
     return authService.getToken()
     .then(token => {
-      let url = `${__API_URL__}/api/manuscript/${manuscriptID}`; //eslint-disable-line
+      let url = `${__API_URL__}/api/manuscript/${manuscriptData._id}`; //eslint-disable-line
       let config = {
         headers: {
           Authorization: `Bearer ${token}`
@@ -111,7 +111,7 @@ function manuscriptService($q, $log, $http, authService) {
     .then(() => {
       for (let i = 0; i < service.manuscripts.length; i++) {
         let current = service.manuscripts[i];
-        if (current._id === manuscriptID) {
+        if (current._id === manuscriptData._id) {
           service.manuscripts.splice(i, 1);
           break;
         }
