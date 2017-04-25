@@ -1,0 +1,21 @@
+<section class="edit">
+  <form class="edit-chapter"
+    name="editChapterForm"
+    ng-submit="editChapterCtrl.updateChapter()"
+    no-validate>
+
+    <div class="edit-container">
+      <fieldset>
+        <span class="item-label">title:</span>
+        <input class="input-std" ng-model="editChapterCtrl.chapter.title">
+      </fieldset>
+
+      <fieldset>
+        <span class="item-label">body:</span>
+        <input class="input-std" ng-model="editChapterCtrl.chapter.body">
+      </fieldset>
+    </div>
+
+    <button type="submit" class="btn-std">update</button>
+  </form>
+</section>
