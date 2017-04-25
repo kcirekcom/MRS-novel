@@ -1,0 +1,26 @@
+<section class="create-manuscript">
+  <h2>Create a new manuscript.</h2>
+
+  <form name="createManuscriptForm"
+    class="manuscript-form"
+    ng-submit="createManuscriptCtrl.createManuscript()">
+
+    <fieldset>
+      <input
+        placeholder="manuscript title"
+        class="input-std"
+        type="text"
+        ng-model="createManuscriptCtrl.manuscript.title" required>
+    </fieldset>
+
+    <fieldset>
+      <input
+        placeholder="manuscript description"
+        class="input-std"
+        type="text"
+        ng-model="createManuscriptCtrl.manuscript.desc" required>
+    </fieldset>
+
+    <button class="add-manuscript-btn" type="submit">create manuscript</button>
+  </form>
+</section>
