@@ -1,0 +1,21 @@
+<section class="create-chapter">
+  <h3>Add a new chapter.</h3>
+  
+  <form class="chapter-form" ng-submit="createChapterCtrl.createChapter()" novalidate>
+
+    <fieldset>
+      <input
+        class="input-std"
+        type="text"
+        ng-model="createChapterCtrl.chapter.title"
+        placeholder="chapter title">
+      <input
+        class="input-std"
+        type="text"
+        ng-model="createChapterCtrl.chapter.body"
+        placeholder="chapter body">
+    </fieldset>
+
+    <button class="add-chapter-btn" type="submit">add chapter</button>
+  </form>
+</section>
