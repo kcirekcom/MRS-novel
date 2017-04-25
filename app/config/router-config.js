@@ -4,7 +4,6 @@ module.exports = ['$stateProvider', '$urlRouterProvider', routerConfig];
 
 function routerConfig($stateProvider, $urlRouterProvider) {
   $urlRouterProvider.when('', '/home');
-  $urlRouterProvider.when('admin', '/admin#signin');
 
   let states = [
     {
@@ -22,11 +21,18 @@ function routerConfig($stateProvider, $urlRouterProvider) {
       controllerAs: 'chaptersCtrl'
     },
     {
-      name: 'admin',
-      url: '/admin',
-      template: require('../view/admin/admin.html'),
-      controller: 'AdminController',
-      controllerAs: 'adminCtrl'
+      name: 'admin-login',
+      url: '/admin-login',
+      template: require('../view/admin-login/admin-login.html'),
+      controller: 'AdminLoginController',
+      controllerAs: 'adminLoginCtrl'
+    },
+    {
+      name: 'admin-home',
+      url: '/admin-home',
+      template: require('../view/admin-home/admin-home.html'),
+      controller: 'AdminHomeController',
+      controllerAs: 'adminHomeCtrl'
     }
   ];
 

@@ -7,11 +7,10 @@ const angular = require('angular');
 const camelcase = require('camelcase');
 const pascalcase = require('pascalcase');
 const uiRouter = require('angular-ui-router');
-const ngTouch = require('angular-touch');
 const ngAnimate = require('angular-animate');
-const uiTinymce = require('ui.tinymce');
+require('angular-ui-tinymce');
 
-const mrsnovel = angular.module('mrsnovel', [ngTouch, ngAnimate, uiRouter, uiTinymce]);
+const mrsnovel = angular.module('mrsnovel', [ngAnimate, uiRouter, 'ui.tinymce']);
 
 let context = require.context('./config/', true, /\.js$/);
 context.keys().forEach(path => {
