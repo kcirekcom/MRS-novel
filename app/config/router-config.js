@@ -4,6 +4,7 @@ module.exports = ['$stateProvider', '$urlRouterProvider', routerConfig];
 
 function routerConfig($stateProvider, $urlRouterProvider) {
   $urlRouterProvider.when('', '/home');
+  $urlRouterProvider.when('admin', '/admin#signin');
 
   let states = [
     {
@@ -19,6 +20,13 @@ function routerConfig($stateProvider, $urlRouterProvider) {
       template: require('../view/chapters/chapters.html'),
       controller: 'ChaptersController',
       controllerAs: 'chaptersCtrl'
+    },
+    {
+      name: 'admin',
+      url: '/admin',
+      template: require('../view/admin/admin.html'),
+      controller: 'AdminController',
+      controllerAs: 'adminCtrl'
     }
   ];
 

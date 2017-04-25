@@ -1,0 +1,22 @@
+<li class="chapter-item">
+  <div class="current-item" ng-if="!chapterItemCtrl.showEditChapter">
+    <div class="title-label">
+      <span class="item-label">title:</span>
+      <span>{{chapterItemCtrl.chapter.title}}</span>
+    </div>
+
+    <div class="body-label">
+      <span class="item-label">body:</span>
+      <span>{{chapterItemCtrl.chapter.body}}</span>
+    </div>
+
+    <div class="update-container" ng-if="!chapterItemCtrl.showEditChapter">
+      <button class="btn-std" ng-click="chapterItemCtrl.showEditChapter = !chapterItemCtrl.showEditChapter">edit</button>
+      <button class="btn-std" ng-click="chapterItemCtrl.deleteChapter()">delete</button>
+    </div>
+  </div>
+
+  <edit-chapter ng-if="chapterItemCtrl.showEditManuscript" chapter="chapterItemCtrl.chapter"></edit-chapter>
+
+  <create-chapter chapter="chapterItemCtrl.chapter"></create-chapter>
+</li>
