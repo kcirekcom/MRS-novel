@@ -5,14 +5,14 @@
       <span>{{manuscriptItemCtrl.manuscript.title}}</span>
     </div>
 
-    <div>
+    <div class="desc-label">
       <span class="item-label">description:</span>
       <span>{{manuscriptItemCtrl.manuscript.desc}}</span>
     </div>
 
     <div class="update-container" ng-if="!manuscriptItemCtrl.showEditManuscript">
-      <button class="btn-secondary" ng-click="manuscriptItemCtrl.showEditManuscript = !manuscriptItemCtrl.showEditManuscript">edit</button>
-      <button class="btn-secondary" ng-click="manuscriptItemCtrl.deletePost()">delete</button>
+      <button class="btn-std" ng-click="manuscriptItemCtrl.showEditManuscript = !manuscriptItemCtrl.showEditManuscript">edit</button>
+      <button class="btn-std" ng-click="manuscriptItemCtrl.deleteManuscript()">delete</button>
     </div>
   </div>
 
