@@ -13,6 +13,10 @@ module.exports = {
 function EditChapterController($log, chapterService) {
   $log.debug('EditChapterController');
 
+  this.tinymceOptions = {
+    toolbar: 'undo redo | bold italic | alignleft aligncenter alignright justify | code'
+  };
+
   this.updateChapter = function() {
     $log.debug('editChapterCtrl.updateChapter()');
     chapterService.updateChapter(this.chapter)
