@@ -1,0 +1,21 @@
+<section class="edit">
+  <form class="edit-manuscript"
+    name="editManuscriptForm"
+    ng-submit="editManuscriptCtrl.updateManuscript()"
+    no-validate>
+
+    <div class="edit-container">
+      <fieldset>
+        <span class="item-label">title:</span>
+        <input class="input-std" ng-model="editManuscriptCtrl.manuscript.title">
+      </fieldset>
+
+      <fieldset>
+        <span class="item-label">description:</span>
+        <input class="input-std" ng-model="editManuscriptCtrl.manuscript.desc">
+      </fieldset>
+    </div>
+
+    <button type="submit" class="btn-std">update</button>
+  </form>
+</section>
