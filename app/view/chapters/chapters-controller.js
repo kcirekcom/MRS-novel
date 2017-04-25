@@ -16,9 +16,6 @@ function ChaptersController($log, $rootScope, chapterService){
     return this.chaptersArray.reverse();
   };
 
-  // this.chapters = chapters.reverse();
-  // this.currentChapter = chapters[0];
-
   this.fetchAllChaptersFromDB();
 
   $rootScope.$on('$locationChangeSuccess', () => {
