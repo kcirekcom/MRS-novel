@@ -21,15 +21,15 @@ function routerConfig($stateProvider, $urlRouterProvider) {
       controllerAs: 'chaptersCtrl'
     },
     {
-      name: 'admin-login',
-      url: '/admin-login',
+      name: 'login',
+      url: '/login',
       template: require('../view/admin-login/admin-login.html'),
       controller: 'AdminLoginController',
       controllerAs: 'adminLoginCtrl'
     },
     {
-      name: 'admin-home',
-      url: '/admin-home',
+      name: 'admin',
+      url: '/admin',
       template: require('../view/admin-home/admin-home.html'),
       controller: 'AdminHomeController',
       controllerAs: 'adminHomeCtrl'
