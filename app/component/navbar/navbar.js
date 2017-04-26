@@ -20,7 +20,7 @@ function NavbarController($log, $location, $rootScope, authService) {
       this.hideButtons = false;
       authService.getToken()
       .catch(() => {
-        $location.url('/admin');
+        $location.url('/');
       });
     }
   };
@@ -37,7 +37,7 @@ function NavbarController($log, $location, $rootScope, authService) {
     this.hideButtons = true;
     authService.logout()
     .then(() => {
-      $location.url('/home');
+      $location.url('/login');
     });
   };
 }

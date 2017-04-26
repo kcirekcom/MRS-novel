@@ -14,6 +14,10 @@ function CreateChapterController($log, chapterService) {
 
   this.chapter = {};
 
+  this.tinymceOptions = {
+    toolbar: 'undo redo | bold italic | alignleft aligncenter alignright justify | code'
+  };
+
   this.createChapter = function() {
     chapterService.createChapter(this.chapter)
     .then(() => {

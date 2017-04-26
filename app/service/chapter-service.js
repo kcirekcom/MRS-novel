@@ -11,6 +11,9 @@ function chapterService($q, $log, $http, authService) {
   service.createChapter = (chapter) => {
     $log.debug('chapterService.createChapter()');
 
+    authService.getUserId();
+    authService.getManuscriptId();
+
     return authService.getToken()
     .then(token => {
       let url = `${__API_URL__}/api/manuscript/${authService.currentManuscriptID}/chapter`; // eslint-disable-line

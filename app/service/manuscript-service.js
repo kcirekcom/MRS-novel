@@ -27,6 +27,8 @@ function manuscriptService($q, $log, $http, authService) {
     .then(res => {
       $log.log('user manuscript created');
       let manuscript = res.data;
+
+      service.manuscripts.unshift(manuscript);
       return manuscript;
     })
     .catch(err => {

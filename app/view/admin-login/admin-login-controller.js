@@ -4,5 +4,5 @@ module.exports = ['$log', '$location', '$rootScope', 'authService', AdminLoginCo
 
 function AdminLoginController($log, $location, authService) {
   let url = $location.url();
-  this.showLogin = url === '/admin#login' || url === '/admin';
+  this.showLogin = url === '/login';
 }
