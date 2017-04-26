@@ -1,0 +1,15 @@
+<section class="home">
+  <create-manuscript></create-manuscript>
+
+  <div class="manuscript-item-container">
+    <h2>Manuscripts</h2>
+    <ul class="overflow">
+      <manuscript-item
+        ng-repeat="item in adminHomeCtrl.manuscripts"
+        manuscript="item"
+        delete-done="adminHomeCtrl.manuscriptDeleteDone(manuscriptData)"
+        ng-click="adminHomeCtrl.currentManuscript = item">
+      </manuscript-item>
+    </ul>
+  </div>
+</section>

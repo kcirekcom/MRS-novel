@@ -27,6 +27,8 @@ function manuscriptService($q, $log, $http, authService) {
     .then(res => {
       $log.log('user manuscript created');
       let manuscript = res.data;
+
+      service.manuscripts.unshift(manuscript);
       return manuscript;
     })
     .catch(err => {
@@ -36,7 +38,7 @@ function manuscriptService($q, $log, $http, authService) {
   };
 
   service.fetchManuscripts = function() {
-    $log.debug('manuscriptService.fetchUserManuscript()');
+    $log.debug('manuscriptService.fetchManuscripts()');
 
     return authService.getToken()
     .then(token => {
@@ -51,7 +53,7 @@ function manuscriptService($q, $log, $http, authService) {
       return $http.get(url, config);
     })
     .then(res => {
-      $log.log('manuscript retrieved');
+      $log.log('manuscripts retrieved');
       service.manuscripts = res.data;
       return service.manuscripts;
     })

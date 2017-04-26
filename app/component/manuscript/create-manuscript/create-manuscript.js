@@ -11,7 +11,7 @@ function CreateManuscriptController($log, manuscriptService) {
 
   this.manuscript = {};
 
-  this.createGallery = function() {
+  this.createManuscript = function() {
     manuscriptService.createManuscript(this.manuscript)
     .then(() => {
       this.manuscript.title = null;

@@ -12,15 +12,15 @@ function NavbarController($log, $location, $rootScope, authService) {
   this.checkPath = function() {
     let path = $location.path();
 
-    if (path === '/admin') {
+    if (path === '/login' || path === '/home' || path === '/chapters') {
       this.hideButtons = true;
     }
 
-    if (path !== '/admin') {
+    if (path !== '/login' || path !== '/home' || path !== '/chapters') {
       this.hideButtons = false;
       authService.getToken()
       .catch(() => {
-        $location.url('/admin#login');
+        $location.url('/');
       });
     }
   };
@@ -37,7 +37,7 @@ function NavbarController($log, $location, $rootScope, authService) {
     this.hideButtons = true;
     authService.logout()
     .then(() => {
-      $location.url('/');
+      $location.url('/login');
     });
   };
 }
