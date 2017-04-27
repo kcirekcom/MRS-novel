@@ -15,11 +15,14 @@ function CreateChapterController($log, chapterService) {
   this.chapter = {};
 
   this.tinymceOptions = {
-    toolbar: 'undo redo | bold italic | alignleft aligncenter alignright justify | code'
+    resize: false,
+    height: 300,
+    toolbar: 'undo redo | bold italic | alignleft aligncenter alignright | code'
   };
 
   this.createChapter = function() {
-    chapterService.createChapter(this.chapter)
+    console.log(this.manuscript);
+    chapterService.createChapter(this.manuscript, this.chapter)
     .then(() => {
       this.chapter.title = null;
       this.chapter.body = null;

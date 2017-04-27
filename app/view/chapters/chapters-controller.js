@@ -10,10 +10,13 @@ function ChaptersController($log, $rootScope, chapterService){
   this.fetchAllChaptersFromDB = () => {
     chapterService.fetchAllChaptersFromDB()
     .then(chapters => {
-      this.chaptersArray.push(chapters);
+      this.chaptersArray = [];
+      chapters.data.forEach(chapter => {
+        this.chaptersArray.push(chapter);
+      });
       console.log(this.chaptersArray);
+      return this.chaptersArray.reverse();
     });
-    return this.chaptersArray.reverse();
   };
 
   this.fetchAllChaptersFromDB();

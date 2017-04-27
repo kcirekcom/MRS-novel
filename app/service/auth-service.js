@@ -89,7 +89,7 @@ function authService($q, $log, $http, $window) {
     });
   };
 
-  service.getUserId = function(){
+  service.getUserId = function() {
     $log.debug('authService.getUserId');
 
     token = $window.localStorage.getItem('token');
@@ -102,7 +102,7 @@ function authService($q, $log, $http, $window) {
     return service.currentUserID;
   };
 
-  service.getManuscriptId = function(){
+  service.getManuscriptId = function() {
     $log.debug('authService.getManuscriptId()');
 
     return service.getToken()
