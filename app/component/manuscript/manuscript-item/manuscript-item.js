@@ -28,7 +28,6 @@ function ManuscriptItemController($log, manuscriptService) {
           this.chapters.push(chapter);
         });
       });
-      console.log(this.chapters);
       $log.log('chapters retrieved');
       return this.chapters.reverse();
     });

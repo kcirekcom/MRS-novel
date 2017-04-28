@@ -16,7 +16,7 @@ function EditManuscriptController($log, manuscriptService) {
     $log.debug('editManuscriptCtrl.updateManuscript()');
     manuscriptService.updateManuscript(this.manuscript)
     .then(() => {
-      $log.debug('manuscript updated');
+      $log.log('manuscript updated');
     })
     .catch( err => {
       $log.error(err.message);
