@@ -17,11 +17,19 @@ function CreateChapterController($log, chapterService) {
   this.tinymceOptions = {
     resize: false,
     height: 300,
-    toolbar: 'undo redo | bold italic | alignleft aligncenter alignright | code'
+    browser_spellcheck: true,
+    plugins: 'link image code',
+    menu: {
+      file: {title: 'File', items: 'newdocument'},
+      edit: {title: 'Edit', items: 'undo redo | cut copy paste pastetext | selectall'},
+      insert: {title: 'Insert', items: 'link media | template hr'},
+      view: {title: 'View', items: 'visualaid'},
+      tools: {title: 'Tools', items: 'code'}
+    }
   };
 
   this.createChapter = function() {
-    console.log(this.manuscript);
+    // console.log(this.manuscript);
     chapterService.createChapter(this.manuscript, this.chapter)
     .then(() => {
       this.chapter.title = null;

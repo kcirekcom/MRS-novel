@@ -68,12 +68,14 @@ function chapterService($q, $log, $http, authService) {
     });
   };
 
-  service.updateChapter = (chapterData) => {
+  service.updateChapter = (manuscriptData, chapterData) => {
     $log.debug('chapterService.updateChapter()');
+    console.log(manuscriptData);
+    console.log(chapterData);
 
     return authService.getToken()
     .then(token => {
-      let url = `${__API_URL__}/api/manuscript/${authService.currentManuscriptID}/chapter/${chapterData._id}`; // eslint-disable-line
+      let url = `${__API_URL__}/api/manuscript/${manuscriptData._id}/chapter/${chapterData._id}`; // eslint-disable-line
       let config = {
         headers: {
           Accept: 'application/json',

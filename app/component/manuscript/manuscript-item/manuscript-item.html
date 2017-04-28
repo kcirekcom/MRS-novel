@@ -18,5 +18,8 @@
 
   <edit-manuscript ng-if="manuscriptItemCtrl.showEditManuscript" manuscript="manuscriptItemCtrl.manuscript"></edit-manuscript>
 
-  <chapter-item manuscript="manuscriptItemCtrl.manuscript"></chapter-item>
+  <create-chapter manuscript="manuscriptItemCtrl.manuscript"></create-chapter>
+
+  <chapter-item ng-repeat="item in manuscriptItemCtrl.chapters"
+  chapter="item" manuscript="manuscriptItemCtrl.manuscript"></chapter-item>
 </li>

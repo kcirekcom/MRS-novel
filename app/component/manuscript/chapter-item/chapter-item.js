@@ -20,7 +20,7 @@ function ChapterItemController($log, chapterService) {
 
     chapterService.deleteChapter(this.chapter)
     .then(() => {
-      $log.debug('chapter deleted');
+      $log.log('chapter deleted');
     })
     .catch(err => {
       $log.error(err.message);

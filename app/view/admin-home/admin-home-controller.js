@@ -6,12 +6,25 @@ function AdminHomeController($log, $rootScope, manuscriptService) {
   $log.debug('AdminHomeController');
 
   this.manuscripts = [];
+  this.chapters = [];
 
   this.fetchManuscripts = function() {
     manuscriptService.fetchManuscripts()
     .then(manuscripts => {
       this.manuscripts = manuscripts.reverse();
       this.currentManuscript = manuscripts[0];
+      return this.manuscripts;
+    })
+    .then(manuscripts => {
+      console.log(manuscripts);
+      this.chapters = [];
+      manuscripts.forEach(manuscript => {
+        manuscript.chapters.forEach(chapter => {
+          this.chapters.push(chapter);
+        });
+      });
+      console.log(this.chapters);
+      return this.chapters.reverse();
     });
   };
 

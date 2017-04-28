@@ -15,14 +15,35 @@ function ManuscriptItemController($log, manuscriptService) {
 
   this.showEditManuscript = false;
 
+  this.chapters = [];
+
+  this.fetchChapters = function() {
+    manuscriptService.fetchManuscripts()
+    .then(manuscripts => {
+      return manuscripts.reverse();
+    })
+    .then(manuscripts => {
+      manuscripts.forEach(manuscript => {
+        manuscript.chapters.forEach(chapter => {
+          this.chapters.push(chapter);
+        });
+      });
+      console.log(this.chapters);
+      $log.log('chapters retrieved');
+      return this.chapters.reverse();
+    });
+  };
+
   this.deleteManuscript = function() {
     $log.debug('manuscriptItemCtrl.deleteManuscript()');
     manuscriptService.deleteManuscript(this.manuscript)
     .then(() => {
-      $log.debug('manuscript deleted');
+      $log.log('manuscript deleted');
     })
     .catch(err => {
       $log.error(err.message);
     });
   };
+
+  this.fetchChapters();
 }
