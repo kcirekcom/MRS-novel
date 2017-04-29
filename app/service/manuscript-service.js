@@ -87,7 +87,6 @@ function manuscriptService($q, $log, $http, authService) {
           break;
         }
       }
-
       return res.data;
     })
     .catch(err => {

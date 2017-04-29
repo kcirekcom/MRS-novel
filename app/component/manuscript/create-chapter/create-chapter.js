@@ -29,11 +29,13 @@ function CreateChapterController($log, chapterService) {
   };
 
   this.createChapter = function() {
-    // console.log(this.manuscript);
     chapterService.createChapter(this.manuscript, this.chapter)
     .then(() => {
       this.chapter.title = null;
       this.chapter.body = null;
+    })
+    .catch(err => {
+      $log.error(err.message);
     });
   };
 }

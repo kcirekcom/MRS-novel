@@ -70,8 +70,6 @@ function chapterService($q, $log, $http, authService) {
 
   service.updateChapter = (manuscriptData, chapterData) => {
     $log.debug('chapterService.updateChapter()');
-    console.log(manuscriptData);
-    console.log(chapterData);
 
     return authService.getToken()
     .then(token => {

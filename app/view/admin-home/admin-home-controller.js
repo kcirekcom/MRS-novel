@@ -12,6 +12,9 @@ function AdminHomeController($log, $rootScope, manuscriptService) {
     .then(manuscripts => {
       this.manuscripts = manuscripts.reverse();
       this.currentManuscript = manuscripts[0];
+    })
+    .catch(err => {
+      $log.error(err.message);
     });
   };
 

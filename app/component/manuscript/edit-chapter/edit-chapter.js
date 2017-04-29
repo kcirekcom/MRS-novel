@@ -32,9 +32,9 @@ function EditChapterController($log, chapterService) {
 
     chapterService.updateChapter(this.manuscript, this.chapter)
     .then(() => {
-      $log.debug('chapter updated');
+      $log.log('chapter updated');
     })
-    .catch( err => {
+    .catch(err => {
       $log.error(err.message);
     });
   };

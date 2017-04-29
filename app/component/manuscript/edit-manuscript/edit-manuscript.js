@@ -12,6 +12,8 @@ module.exports = {
 function EditManuscriptController($log, manuscriptService) {
   $log.debug('EditManuscriptController');
 
+  this.showEditManuscript = false;
+
   this.updateManuscript = function() {
     $log.debug('editManuscriptCtrl.updateManuscript()');
     manuscriptService.updateManuscript(this.manuscript)

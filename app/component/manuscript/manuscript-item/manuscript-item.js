@@ -20,16 +20,15 @@ function ManuscriptItemController($log, manuscriptService) {
   this.fetchChapters = function() {
     manuscriptService.fetchManuscripts()
     .then(manuscripts => {
-      return manuscripts.reverse();
-    })
-    .then(manuscripts => {
       manuscripts.forEach(manuscript => {
         manuscript.chapters.forEach(chapter => {
-          this.chapters.push(chapter);
+          this.chapters.unshift(chapter);
         });
+        $log.log('chapters retrieved');
       });
-      $log.log('chapters retrieved');
-      return this.chapters.reverse();
+    })
+    .catch(err => {
+      $log.error(err.message);
     });
   };
 
