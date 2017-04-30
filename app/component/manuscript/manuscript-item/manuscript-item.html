@@ -1,5 +1,5 @@
 <li class="manuscript-item">
-  <div class="current-item" ng-if="!manuscriptItemCtrl.showEditManuscript">
+  <div class="current-item" ng-if="!manuscriptItemCtrl.changeEdit.showEditManuscript">
     <div class="title-label">
       <span class="item-label">title:</span>
       <span>{{manuscriptItemCtrl.manuscript.title}}</span>
@@ -10,13 +10,13 @@
       <span>{{manuscriptItemCtrl.manuscript.desc}}</span>
     </div>
 
-    <div class="update-container" ng-if="!manuscriptItemCtrl.showEditManuscript">
-      <button class="btn-std" ng-click="manuscriptItemCtrl.showEditManuscript = !manuscriptItemCtrl.showEditManuscript">edit</button>
+    <div class="update-container" ng-if="!manuscriptItemCtrl.changeEdit.showEditManuscript">
+      <button class="btn-std" ng-click="manuscriptItemCtrl.changeEdit.showEditManuscript = !manuscriptItemCtrl.changeEdit.showEditManuscript">edit</button>
       <button class="btn-std" ng-click="manuscriptItemCtrl.deleteManuscript()">delete</button>
     </div>
   </div>
 
-  <edit-manuscript ng-if="manuscriptItemCtrl.showEditManuscript" manuscript="manuscriptItemCtrl.manuscript"></edit-manuscript>
+  <edit-manuscript ng-if="manuscriptItemCtrl.changeEdit.showEditManuscript" manuscript="manuscriptItemCtrl.manuscript" change-edit="manuscriptItemCtrl.changeEdit"></edit-manuscript>
 
   <create-chapter manuscript="manuscriptItemCtrl.manuscript"></create-chapter>
 

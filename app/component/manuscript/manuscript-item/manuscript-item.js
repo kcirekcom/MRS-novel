@@ -2,7 +2,7 @@
 
 module.exports = {
   template: require('./manuscript-item.html'),
-  controller: ['$log', 'manuscriptService', ManuscriptItemController],
+  controller: ['$log', 'manuscriptService', 'chapterService', ManuscriptItemController],
   controllerAs: 'manuscriptItemCtrl',
   bindings: {
     manuscript: '<',
@@ -10,19 +10,21 @@ module.exports = {
   }
 };
 
-function ManuscriptItemController($log, manuscriptService) {
+function ManuscriptItemController($log, manuscriptService, chapterService) {
   $log.debug('ManuscriptItemController');
 
-  this.showEditManuscript = false;
+  this.changeEdit = {
+    showEditManuscript: false
+  };
 
-  this.chapters = [];
+  this.chapters = chapterService.allChapters;
 
   this.fetchChapters = function() {
     manuscriptService.fetchManuscripts()
     .then(manuscripts => {
       manuscripts.forEach(manuscript => {
         manuscript.chapters.forEach(chapter => {
-          this.chapters.unshift(chapter);
+          chapterService.allChapters.unshift(chapter);
         });
         $log.log('chapters retrieved');
       });
