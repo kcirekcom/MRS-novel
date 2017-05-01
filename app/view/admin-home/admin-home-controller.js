@@ -5,12 +5,15 @@ module.exports = ['$log', '$rootScope', 'manuscriptService', AdminHomeController
 function AdminHomeController($log, $rootScope, manuscriptService) {
   $log.debug('AdminHomeController');
 
-  this.manuscripts = [];
+  this.manuscripts = manuscriptService.manuscripts;
 
   this.fetchManuscripts = function() {
     manuscriptService.fetchManuscripts()
     .then(manuscripts => {
-      this.manuscripts = manuscripts.reverse();
+      manuscripts.forEach(manuscript => {
+        console.log(manuscript);
+        this.manuscripts.unshift(manuscript);
+      });
       this.currentManuscript = manuscripts[0];
     })
     .catch(err => {
