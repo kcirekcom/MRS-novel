@@ -5,7 +5,8 @@ module.exports = {
   controller: ['$log', 'manuscriptService', EditManuscriptController],
   controllerAs: 'editManuscriptCtrl',
   bindings: {
-    manuscript: '<'
+    manuscript: '<',
+    changeEdit: '='
   }
 };
 
@@ -16,7 +17,8 @@ function EditManuscriptController($log, manuscriptService) {
     $log.debug('editManuscriptCtrl.updateManuscript()');
     manuscriptService.updateManuscript(this.manuscript)
     .then(() => {
-      $log.debug('manuscript updated');
+      this.changeEdit.showEditManuscript = false;
+      $log.log('manuscript updated');
     })
     .catch( err => {
       $log.error(err.message);

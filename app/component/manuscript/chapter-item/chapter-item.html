@@ -7,7 +7,7 @@
 
     <div class="body-label">
       <span class="item-label">body:</span>
-      <span>{{chapterItemCtrl.chapter.body}}</span>
+      <span ng-bind-html="chapterItemCtrl.chapter.body">{{chapterItemCtrl.chapter.body}}</span>
     </div>
 
     <div class="update-container" ng-if="!chapterItemCtrl.showEditChapter">
@@ -16,7 +16,5 @@
     </div>
   </div>
 
-  <edit-chapter ng-if="chapterItemCtrl.showEditChapter" chapter="chapterItemCtrl.chapter"></edit-chapter>
-
-  <create-chapter chapter="chapterItemCtrl.chapter"></create-chapter>
+  <edit-chapter ng-if="chapterItemCtrl.showEditChapter" manuscript="chapterItemCtrl.manuscript" chapter="chapterItemCtrl.chapter"></edit-chapter>
 </li>

@@ -17,6 +17,9 @@ function CreateManuscriptController($log, manuscriptService) {
       this.manuscript.title = null;
       this.manuscript.desc = null;
       this.manuscript.userID = null;
+    })
+    .catch(err => {
+      $log.error(err.message);
     });
   };
 }

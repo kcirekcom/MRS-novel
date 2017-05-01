@@ -8,15 +8,12 @@ function chapterService($q, $log, $http, authService) {
   let service = {};
   service.allChapters = [];
 
-  service.createChapter = (chapter) => {
+  service.createChapter = (manuscriptData, chapterData) => {
     $log.debug('chapterService.createChapter()');
-
-    authService.getUserId();
-    authService.getManuscriptId();
 
     return authService.getToken()
     .then(token => {
-      let url = `${__API_URL__}/api/manuscript/${authService.currentManuscriptID}/chapter`; // eslint-disable-line
+      let url = `${__API_URL__}/api/manuscript/${manuscriptData._id}/chapter`; // eslint-disable-line
 
       let config = {
         headers: {
@@ -26,12 +23,12 @@ function chapterService($q, $log, $http, authService) {
         }
       };
 
-      return $http.post(url, chapter, config);
+      return $http.post(url, chapterData, config);
     })
     .then(res => {
       $log.log('chapter created');
-
       let chapter = res.data;
+
       service.allChapters.unshift(chapter);
       return chapter;
     })
@@ -61,7 +58,7 @@ function chapterService($q, $log, $http, authService) {
       return $http.get(url, config);
     })
     .then(res => {
-      $log.log('user manuscripts retrieved');
+      $log.log('chapters retrieved');
       service.allChapters = res.data;
       return service.allChapters;
     })
@@ -71,12 +68,12 @@ function chapterService($q, $log, $http, authService) {
     });
   };
 
-  service.updateChapter = (chapterData) => {
+  service.updateChapter = (manuscriptData, chapterData) => {
     $log.debug('chapterService.updateChapter()');
 
     return authService.getToken()
     .then(token => {
-      let url = `${__API_URL__}/api/manuscript/${authService.currentManuscriptID}/chapter/${chapterData._id}`; // eslint-disable-line
+      let url = `${__API_URL__}/api/manuscript/${manuscriptData._id}/chapter/${chapterData._id}`; // eslint-disable-line
       let config = {
         headers: {
           Accept: 'application/json',

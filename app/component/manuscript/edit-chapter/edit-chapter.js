@@ -14,16 +14,27 @@ function EditChapterController($log, chapterService) {
   $log.debug('EditChapterController');
 
   this.tinymceOptions = {
-    toolbar: 'undo redo | bold italic | alignleft aligncenter alignright justify | code'
+    resize: false,
+    height: 300,
+    browser_spellcheck: true,
+    plugins: 'link image code',
+    menu: {
+      file: {title: 'File', items: 'newdocument'},
+      edit: {title: 'Edit', items: 'undo redo | cut copy paste pastetext | selectall'},
+      insert: {title: 'Insert', items: 'link media | template hr'},
+      view: {title: 'View', items: 'visualaid'},
+      tools: {title: 'Tools', items: 'code'}
+    }
   };
 
   this.updateChapter = function() {
     $log.debug('editChapterCtrl.updateChapter()');
-    chapterService.updateChapter(this.chapter)
+
+    chapterService.updateChapter(this.manuscript, this.chapter)
     .then(() => {
-      $log.debug('chapter updated');
+      $log.log('chapter updated');
     })
-    .catch( err => {
+    .catch(err => {
       $log.error(err.message);
     });
   };
