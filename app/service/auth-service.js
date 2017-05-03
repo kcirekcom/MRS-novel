@@ -89,39 +89,39 @@ function authService($q, $log, $http, $window) {
     });
   };
 
-  service.getUserId = function() {
-    $log.debug('authService.getUserId');
+  // service.getUserId = function() {
+  //   $log.debug('authService.getUserId');
+  //
+  //   token = $window.localStorage.getItem('token');
+  //
+  //   let parseToken = JWT.read(token);
+  //   service.currentUserID = parseToken.claim.userID;
+  //
+  //   $log.debug('currentUserID', service.currentUserID);
+  //
+  //   return service.currentUserID;
+  // };
 
-    token = $window.localStorage.getItem('token');
-
-    let parseToken = JWT.read(token);
-    service.currentUserID = parseToken.claim.userID;
-
-    $log.debug('currentUserID', service.currentUserID);
-
-    return service.currentUserID;
-  };
-
-  service.getManuscriptId = function() {
-    $log.debug('authService.getManuscriptId()');
-
-    return service.getToken()
-    .then(token => {
-      let url = `${__API_URL__}/api/user/${service.currentUserID}/manuscript`; // eslint-disable-line
-      let config = {
-        headers: {
-          Accept: 'application/json',
-          'Content-Type': 'application/json',
-          Authorization: `Bearer ${token}`
-        }
-      };
-      return $http.get(url, config);
-    })
-    .then(res => {
-      $log.log('response', res);
-      this.currentManuscriptID = res.data._id;
-    });
-  };
+  // service.getManuscriptId = function() {
+  //   $log.debug('authService.getManuscriptId()');
+  //
+  //   return service.getToken()
+  //   .then(token => {
+  //     let url = `${__API_URL__}/api/user/${service.currentUserID}/manuscript`; // eslint-disable-line
+  //     let config = {
+  //       headers: {
+  //         Accept: 'application/json',
+  //         'Content-Type': 'application/json',
+  //         Authorization: `Bearer ${token}`
+  //       }
+  //     };
+  //     return $http.get(url, config);
+  //   })
+  //   .then(res => {
+  //     $log.log('response', res);
+  //     this.currentManuscriptID = res.data._id;
+  //   });
+  // };
 
   return service;
 }
