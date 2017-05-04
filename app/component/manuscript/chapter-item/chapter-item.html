@@ -11,10 +11,10 @@
     </div>
 
     <div class="read-more" ng-if="!chapterItemCtrl.showReadMore">
-      <span ng-click="chapterItemCtrl.readMore(); chapterItemCtrl.showReadMore = !chapterItemCtrl.showReadMore">read more</span>
+      <span ng-click="chapterItemCtrl.readMore(); chapterItemCtrl.showReadMore = !chapterItemCtrl.showReadMore">read more &rarr;</span>
     </div>
     <div class="read-less" ng-if="chapterItemCtrl.showReadMore">
-      <span ng-click="chapterItemCtrl.readLess(); chapterItemCtrl.showReadMore = !chapterItemCtrl.showReadMore">read less</span>
+      <span ng-click="chapterItemCtrl.readLess(); chapterItemCtrl.showReadMore = !chapterItemCtrl.showReadMore">&larr; read less</span>
     </div>
 
     <div class="update-container" ng-if="!chapterItemCtrl.showEditChapter">
