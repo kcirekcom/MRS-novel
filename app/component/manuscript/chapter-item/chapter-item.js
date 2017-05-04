@@ -30,7 +30,7 @@ function ChapterItemController($log, chapterService) {
   this.deleteChapter = function() {
     $log.debug('chapterItemCtrl.deleteChapter()');
 
-    chapterService.deleteChapter(this.chapter)
+    chapterService.deleteChapter(this.manuscript, this.chapter)
     .then(() => {
       $log.log('chapter deleted');
     })

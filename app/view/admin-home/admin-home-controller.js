@@ -12,8 +12,7 @@ function AdminHomeController($log, $rootScope, manuscriptService) {
     manuscriptService.fetchManuscripts()
     .then(manuscripts => {
       manuscripts.forEach(manuscript => {
-        console.log(manuscript);
-        this.manuscripts.unshift(manuscript);
+        manuscriptService.manuscripts.unshift(manuscript);
       });
       this.currentManuscript = manuscripts[0];
     })

@@ -1,12 +1,11 @@
 'use strict';
 
-module.exports = ['$q', '$log', '$http', 'authService', chapterService];
+module.exports = ['$q', '$log', '$http', 'authService', 'manuscriptService', chapterService];
 
 function chapterService($q, $log, $http, authService) {
   $log.debug('chapterService()');
 
   let service = {};
-  service.allChapters = [];
 
   service.createChapter = (manuscriptData, chapterData) => {
     $log.debug('chapterService.createChapter()');
@@ -29,38 +28,8 @@ function chapterService($q, $log, $http, authService) {
       $log.log('chapter created');
       let chapter = res.data;
 
-      service.allChapters.unshift(chapter);
+      manuscriptData.chapters.unshift(chapter);
       return chapter;
-    })
-    .catch(err => {
-      $log.error(err.message);
-      return $q.reject(err);
-    });
-  };
-
-  service.fetchChapters = function() {
-    $log.debug('chapterService.fetchChapters');
-
-    authService.getUserId();
-
-    return authService.getManuscriptId()
-    .then(() => {
-      return authService.getToken();
-    })
-    .then(token => {
-      let url = `${__API_URL__}/api/manuscript/${authService.currentManuscriptID}/chapter`; //eslint-disable-line
-      let config = {
-        headers: {
-          Accept: 'application/json',
-          Authorization: `Bearer ${token}`
-        }
-      };
-      return $http.get(url, config);
-    })
-    .then(res => {
-      $log.log('chapters retrieved');
-      service.allChapters = res.data;
-      return service.allChapters;
     })
     .catch(err => {
       $log.error(err.message);
@@ -85,10 +54,10 @@ function chapterService($q, $log, $http, authService) {
       return $http.put(url, chapterData, config);
     })
     .then(res => {
-      for (let i = 0; i < service.allChapters.length; i++) {
-        let current = service.allChapters[i];
+      for (let i = 0; i < manuscriptData.chapters.length; i++) {
+        let current = manuscriptData.chapters[i];
         if (current._id === chapterData._id) {
-          service.allChapters[i] = res.data;
+          manuscriptData.chapters[i] = res.data;
           break;
         }
       }
@@ -100,12 +69,12 @@ function chapterService($q, $log, $http, authService) {
     });
   };
 
-  service.deleteChapter = function(chapterData) {
+  service.deleteChapter = function(manuscriptData, chapterData) {
     $log.debug('chapterService.deletePost()');
 
     return authService.getToken()
     .then(token => {
-      let url = `${__API_URL__}/api/manuscript/${authService.currentManuscriptID}/chapter/${chapterData._id}`; // eslint-disable-line
+      let url = `${__API_URL__}/api/manuscript/${manuscriptData._id}/chapter/${chapterData._id}`; // eslint-disable-line
       let config = {
         headers: {
           Authorization: `Bearer ${token}`
@@ -114,10 +83,10 @@ function chapterService($q, $log, $http, authService) {
       return $http.delete(url, config);
     })
     .then(res => { //eslint-disable-line
-      for (let i = 0; i < service.allChapters.length; i++) {
-        let current = service.allChapters[i];
+      for (let i = 0; i < manuscriptData.chapters.length; i++) {
+        let current = manuscriptData.chapters[i];
         if (current._id === chapterData._id) {
-          service.allChapters.splice(i, 1);
+          manuscriptData.chapters.splice(i, 1);
           break;
         }
       }
