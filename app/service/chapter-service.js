@@ -1,6 +1,6 @@
 'use strict';
 
-module.exports = ['$q', '$log', '$http', 'authService', 'manuscriptService', chapterService];
+module.exports = ['$q', '$log', '$http', 'authService', chapterService];
 
 function chapterService($q, $log, $http, authService) {
   $log.debug('chapterService()');

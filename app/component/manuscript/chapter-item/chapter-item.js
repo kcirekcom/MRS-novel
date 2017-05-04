@@ -27,6 +27,14 @@ function ChapterItemController($log, chapterService) {
     this.numLimit = 10000;
   };
 
+  // console.log(this.chapter);
+  // this.daysAgo = parseInt((new Date() - new   Date(this.chapter.timestamp))/60/60/24/1000);
+  // if(this.daysAgo < 1) {
+  //   this.publishStatus = '(published today)';
+  // } else {
+  //   this.publishStatus = this.chapter.timestamp ? 'published ' + this.daysAgo + ' days ago' : '(draft)';
+  // }
+
   this.deleteChapter = function() {
     $log.debug('chapterItemCtrl.deleteChapter()');
 
