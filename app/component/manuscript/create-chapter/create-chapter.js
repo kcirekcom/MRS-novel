@@ -18,7 +18,7 @@ function CreateChapterController($log, chapterService) {
     resize: false,
     height: 300,
     browser_spellcheck: true,
-    plugins: 'link image code',
+    plugins: 'link code',
     menu: {
       file: {title: 'File', items: 'newdocument'},
       edit: {title: 'Edit', items: 'undo redo | cut copy paste pastetext | selectall'},

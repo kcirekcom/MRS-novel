@@ -8,11 +8,11 @@
         class="input-std"
         type="text"
         ng-model="createChapterCtrl.chapter.title"
-        placeholder="chapter title">
+        placeholder="chapter title" required>
       <textarea
         ui-tinymce="createChapterCtrl.tinymceOptions"
         ng-model="createChapterCtrl.chapter.body"
-        placeholder="chapter body"></textarea>
+        placeholder="chapter body" required></textarea>
     </fieldset>
 
     <button class="add-chapter-btn" type="submit">add chapter</button>

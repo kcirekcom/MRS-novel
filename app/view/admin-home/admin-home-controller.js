@@ -5,7 +5,6 @@ module.exports = ['$log', '$rootScope', 'manuscriptService', AdminHomeController
 function AdminHomeController($log, $rootScope, manuscriptService) {
   $log.debug('AdminHomeController');
 
-  // TODO: figure out array situation
   this.manuscripts = manuscriptService.manuscripts;
 
   this.fetchManuscripts = function() {
