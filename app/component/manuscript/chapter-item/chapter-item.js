@@ -15,6 +15,18 @@ function ChapterItemController($log, chapterService) {
 
   this.showEditChapter = false;
 
+  this.showReadMore = false;
+
+  this.numLimit = 2000;
+
+  this.readLess = function() {
+    this.numLimit = 2000;
+  };
+
+  this.readMore = function() {
+    this.numLimit = 10000;
+  };
+
   this.deleteChapter = function() {
     $log.debug('chapterItemCtrl.deleteChapter()');
 

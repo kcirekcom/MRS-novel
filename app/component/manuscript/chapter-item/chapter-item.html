@@ -7,7 +7,15 @@
 
     <div class="body-label">
       <span class="item-label">body:</span>
-      <span ng-bind-html="chapterItemCtrl.chapter.body">{{chapterItemCtrl.chapter.body}}</span>
+      <span ng-bind-html="chapterItemCtrl.chapter.body | limitTo: chapterItemCtrl.numLimit"></span>
+    </div>
+
+    <div class="read-more" ng-if="!chapterItemCtrl.showReadMore">
+      <span ng-click="chapterItemCtrl.readMore(); chapterItemCtrl.showReadMore = !chapterItemCtrl.showReadMore">read more</span>
+    </div>
+
+    <div class="read-less" ng-if="chapterItemCtrl.showReadMore">
+      <span ng-click="chapterItemCtrl.readLess(); chapterItemCtrl.showReadMore = !chapterItemCtrl.showReadMore">read less</span>
     </div>
 
     <div class="update-container" ng-if="!chapterItemCtrl.showEditChapter">
