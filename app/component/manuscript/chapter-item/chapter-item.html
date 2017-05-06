@@ -10,15 +10,20 @@
       <span ng-bind-html="chapterItemCtrl.chapter.body | limitTo: chapterItemCtrl.numLimit"></span>
     </div>
 
-    <div class="read-more" ng-if="!chapterItemCtrl.showReadMore">
+    <div class="read-more fade" ng-if="!chapterItemCtrl.showReadMore">
       <span ng-click="chapterItemCtrl.readMore(); chapterItemCtrl.showReadMore = !chapterItemCtrl.showReadMore">read more &rarr;</span>
     </div>
-    <div class="read-less" ng-if="chapterItemCtrl.showReadMore">
+    <div class="read-less fade" ng-if="chapterItemCtrl.showReadMore">
       <span ng-click="chapterItemCtrl.readLess(); chapterItemCtrl.showReadMore = !chapterItemCtrl.showReadMore">&larr; read less</span>
     </div>
 
     <div class="time-label">
       <span>{{chapterItemCtrl.chapter.timestamp | date: 'MMM d, y h:mm a'}}</span>
+    </div>
+
+    <div class="word-count">
+      <button class="btn-std" ng-click="chapterItemCtrl.wordCount()">word count</button>
+      <span>{{chapterItemCtrl.words}}</span>
     </div>
 
     <div class="update-container" ng-if="!chapterItemCtrl.showEditChapter">

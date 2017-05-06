@@ -17,15 +17,18 @@ function ChapterItemController($log, chapterService) {
 
   this.showReadMore = false;
 
-  this.numLimit;
+  this.numLimit = 2000;
 
   this.words;
 
+  this.wordCount = function() {
+    $log.debug('chapterItemCtrl.wordCount()');
+    let str = this.chapter.body.replace(/<\/?[a-z][^>]*>/gi, '');
+    this.words = str.split(/\s+/).length;
+  };
+
   this.readLess = function() {
-    let str = this.chapter.body;
-    this.words = str.trim().split(' ').length;
-    this.numLimit = this.words;
-    console.log(this.numLimit);
+    this.numLimit = 2000;
   };
 
   this.readMore = function() {
