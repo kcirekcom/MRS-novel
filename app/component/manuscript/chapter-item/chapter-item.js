@@ -21,11 +21,6 @@ function ChapterItemController($log, chapterService) {
 
   this.words;
 
-  this.wordCount = function() {
-    $log.debug('chapterItemCtrl.wordCount()');
-    let str = this.chapter.body.replace(/<\/?[a-z][^>]*>/gi, '');
-    this.words = str.split(/\s+/).length;
-  };
 
   this.readLess = function() {
     this.numLimit = 2000;
@@ -33,6 +28,12 @@ function ChapterItemController($log, chapterService) {
 
   this.readMore = function() {
     this.numLimit = 100000;
+  };
+  
+  this.wordCount = function() {
+    $log.debug('chapterItemCtrl.wordCount()');
+    let str = this.chapter.body.replace(/<\/?[a-z][^>]*>/gi, '');
+    this.words = str.split(/\s+/).length;
   };
 
   this.deleteChapter = function() {

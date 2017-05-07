@@ -1,0 +1,35 @@
+.blur {
+  position: absolute;
+  background: white;
+  width: 90vw;
+  padding: 30px;
+  bottom: -10px;
+  -webkit-filter:blur(5px);
+}
+
+.read-more span, .read-less span {
+  position: absolute;
+  bottom: 0.5vw;
+  left: 40vw;
+  cursor: pointer;
+}
+
+.read-less span {
+  bottom: -30px;
+}
+
+.body-label {
+  position: relative;
+
+  p {
+    width: 80vw;
+    margin: 0 auto;
+    text-indent: 2vw;
+    line-height: 5vh;
+  }
+}
+
+.time-label {
+  clear: both;
+  margin-top: 4vh;
+}

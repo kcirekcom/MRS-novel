@@ -7,14 +7,16 @@
 
     <div class="body-label">
       <span class="item-label">body:</span>
-      <span ng-bind-html="chapterItemCtrl.chapter.body | limitTo: chapterItemCtrl.numLimit"></span>
-    </div>
+      <span ng-bind-html="chapterItemCtrl.chapter.body | limitTo: chapterItemCtrl.numLimit">{{chapterItemCtrl.chapter.body}}</span>
 
-    <div class="read-more fade" ng-if="!chapterItemCtrl.showReadMore">
-      <span ng-click="chapterItemCtrl.readMore(); chapterItemCtrl.showReadMore = !chapterItemCtrl.showReadMore">read more &rarr;</span>
-    </div>
-    <div class="read-less fade" ng-if="chapterItemCtrl.showReadMore">
-      <span ng-click="chapterItemCtrl.readLess(); chapterItemCtrl.showReadMore = !chapterItemCtrl.showReadMore">&larr; read less</span>
+      <div class="read-more">
+        <div class="blur" ng-if="!chapterItemCtrl.showReadMore"></div>
+        <span ng-if="!chapterItemCtrl.showReadMore" ng-click="chapterItemCtrl.readMore(); chapterItemCtrl.showReadMore = !chapterItemCtrl.showReadMore">read more &rarr;</span>
+      </div>
+
+      <div class="read-less" ng-if="chapterItemCtrl.showReadMore">
+        <span ng-click="chapterItemCtrl.readLess(); chapterItemCtrl.showReadMore = !chapterItemCtrl.showReadMore">&larr; read less</span>
+      </div>
     </div>
 
     <div class="time-label">
