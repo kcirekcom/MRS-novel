@@ -2,3 +2,22 @@
   width: 20vw;
   margin-bottom: 2.5em;
 }
+
+.item-label {
+  display: block;
+  margin-bottom: 1.5em;
+}
+
+h2 {
+  clear: both;
+  margin-left: 5vw;
+  margin-bottom: 1.25em;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+h3 {
+  @extend h2;
+  font-size: 1.25em;
+  font-style: oblique;
+}
