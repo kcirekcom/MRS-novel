@@ -1,36 +1,41 @@
 <li class="chapter-item">
   <div class="current-item" ng-if="!chapterItemCtrl.showEditChapter">
-    <div class="title-label">
-      <span class="item-label">title:</span>
-      <span>{{chapterItemCtrl.chapter.title}}</span>
-    </div>
 
-    <div class="body-label">
-      <span class="item-label">body:</span>
-      <span ng-bind-html="chapterItemCtrl.chapter.body | limitTo: chapterItemCtrl.numLimit">{{chapterItemCtrl.chapter.body}}</span>
-
-      <div class="read-more">
-        <div class="blur" ng-if="!chapterItemCtrl.showReadMore"></div>
-        <span ng-if="!chapterItemCtrl.showReadMore" ng-click="chapterItemCtrl.readMore(); chapterItemCtrl.showReadMore = !chapterItemCtrl.showReadMore">read more &rarr;</span>
+    <div class="left">
+      <div class="title-label">
+        <span class="item-label">title:</span>
+        <span>{{chapterItemCtrl.chapter.title}}</span>
       </div>
 
-      <div class="read-less" ng-if="chapterItemCtrl.showReadMore">
-        <span ng-click="chapterItemCtrl.readLess(); chapterItemCtrl.showReadMore = !chapterItemCtrl.showReadMore">&larr; read less</span>
+      <div class="body-label">
+        <span class="item-label">body:</span>
+        <span ng-bind-html="chapterItemCtrl.chapter.body | limitTo: chapterItemCtrl.numLimit">{{chapterItemCtrl.chapter.body}}</span>
+
+        <div class="read-more">
+          <div class="blur" ng-if="!chapterItemCtrl.showReadMore"></div>
+          <span ng-if="!chapterItemCtrl.showReadMore" ng-click="chapterItemCtrl.readMore(); chapterItemCtrl.showReadMore = !chapterItemCtrl.showReadMore">read more &rarr;</span>
+        </div>
+
+        <div class="read-less" ng-if="chapterItemCtrl.showReadMore">
+          <span ng-click="chapterItemCtrl.readLess(); chapterItemCtrl.showReadMore = !chapterItemCtrl.showReadMore">&larr; read less</span>
+        </div>
+      </div>  
+    </div>
+
+    <div class="right">
+      <div class="time-label">
+        <span>{{chapterItemCtrl.chapter.timestamp | date: 'MMM d, y h:mm a'}}</span>
       </div>
-    </div>
 
-    <div class="time-label">
-      <span>{{chapterItemCtrl.chapter.timestamp | date: 'MMM d, y h:mm a'}}</span>
-    </div>
+      <div class="word-count">
+        <button class="btn-std" ng-click="chapterItemCtrl.wordCount()">word count</button>
+        <span>{{chapterItemCtrl.words}}</span>
+      </div>
 
-    <div class="word-count">
-      <button class="btn-std" ng-click="chapterItemCtrl.wordCount()">word count</button>
-      <span>{{chapterItemCtrl.words}}</span>
-    </div>
-
-    <div class="update-container" ng-if="!chapterItemCtrl.showEditChapter">
-      <button class="btn-std" ng-click="chapterItemCtrl.showEditChapter = !chapterItemCtrl.showEditChapter">edit</button>
-      <button class="btn-std" ng-click="chapterItemCtrl.deleteChapter()">delete</button>
+      <div class="update-container" ng-if="!chapterItemCtrl.showEditChapter">
+        <button class="btn-std" ng-click="chapterItemCtrl.showEditChapter = !chapterItemCtrl.showEditChapter">edit</button>
+        <button class="btn-std" ng-click="chapterItemCtrl.deleteChapter()">delete</button>
+      </div>
     </div>
   </div>
 

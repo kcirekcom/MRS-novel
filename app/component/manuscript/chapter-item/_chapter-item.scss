@@ -1,35 +1,64 @@
+.chapter-item {
+  list-style-type: none;
+  clear: both;
+
+  width: 90vw;
+  margin: 2em auto;
+}
+
 .blur {
   position: absolute;
   background: white;
-  width: 90vw;
-  padding: 30px;
-  bottom: -10px;
-  -webkit-filter:blur(5px);
+  width: 100%;
+  padding: 2em;
+  bottom: -1em;
+  right: -2vw;
+  -webkit-filter: blur(5px);
 }
 
 .read-more span, .read-less span {
   position: absolute;
-  bottom: 0.5vw;
-  left: 40vw;
+  bottom: 0.25em;
   cursor: pointer;
 }
 
 .read-less span {
-  bottom: -30px;
+  bottom: -1.75em;
 }
 
 .body-label {
   position: relative;
 
+  .item-label {
+    display: block;
+    margin-bottom: 1.5em;
+  }
+
   p {
-    width: 80vw;
+    width: 70vw;
     margin: 0 auto;
-    text-indent: 2vw;
+    text-indent: 2em;
     line-height: 5vh;
   }
+
+  margin-bottom: 10vh;
 }
 
-.time-label {
-  clear: both;
-  margin-top: 4vh;
+.word-count span {
+  margin-left: 1vw;
+  vertical-align: middle;
+}
+
+.title-label span {
+  display: block;
+  margin-bottom: 1.5em;
+}
+
+.word-count button, .update-container button:nth-child(1) {
+  margin-top: 1.5em;
+}
+
+.left {
+  float: left;
+  margin-right: 5vw;
 }
