@@ -1,0 +1,7 @@
+.edit {
+  @extend .create-chapter;
+
+  .edit-container {
+    @extend .chapter-form;
+  }
+}
