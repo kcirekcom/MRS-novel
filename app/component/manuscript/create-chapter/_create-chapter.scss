@@ -1,0 +1,23 @@
+.create-chapter {
+  width: 90vw;
+  margin: 2em auto;
+
+  h3 {
+    margin-left: 0;
+  }
+
+  .chapter-form {
+    float: left;
+
+    width: 70vw;
+    margin: 0 auto;
+
+    margin-right: 5vw;
+    margin-bottom: 2em;
+
+    .item-label {
+      display: block;
+      margin-bottom: 1.5em;
+    }
+  }
+}

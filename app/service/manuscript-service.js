@@ -54,8 +54,7 @@ function manuscriptService($q, $log, $http, authService) {
     })
     .then(res => {
       $log.log('manuscripts retrieved');
-      service.manuscripts = res.data;
-      return service.manuscripts;
+      return res.data;
     })
     .catch(err => {
       $log.error(err.message);
