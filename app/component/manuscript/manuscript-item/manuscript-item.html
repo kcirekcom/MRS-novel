@@ -20,6 +20,8 @@
 
   <create-chapter manuscript="manuscriptItemCtrl.manuscript"></create-chapter>
 
+  <h3>Chapters</h3>
+
   <chapter-item ng-repeat="item in manuscriptItemCtrl.manuscript.chapters | orderBy:'-timestamp'"
   chapter="item" manuscript="manuscriptItemCtrl.manuscript"></chapter-item>
 </li>

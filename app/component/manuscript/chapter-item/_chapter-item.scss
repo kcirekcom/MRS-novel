@@ -19,6 +19,7 @@
 .read-more span, .read-less span {
   position: absolute;
   bottom: 0.25em;
+  font-weight: bold;
   cursor: pointer;
 }
 
@@ -52,6 +53,10 @@
 .title-label span {
   display: block;
   margin-bottom: 1.5em;
+}
+
+.time-label span {
+  font-weight: bold;
 }
 
 .word-count button, .update-container button:nth-child(1) {
