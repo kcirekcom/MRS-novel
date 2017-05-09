@@ -1,5 +1,8 @@
 @import './lib/base/reset';
+@import './lib/theme/vars';
 @import './lib/base/base';
+
+@import '../component/navbar/navbar';
 
 @import '../component/manuscript/manuscript-item/manuscript-item';
 

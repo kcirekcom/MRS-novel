@@ -1,0 +1,59 @@
+.navbar {
+  height: 4em;
+  background: $brand-primary;
+
+  h1 {
+    float: left;
+    font-family: $font-primary;
+    margin-top: 1.5em;
+    margin-left: $gutter-std;
+  }
+
+  nav {
+    margin-right: $gutter-std;
+
+    .link-container {
+      width: 30vw;
+      float: left;
+      margin-top: 1.5em;
+      margin-left: 45vw;
+      text-align: right;
+
+      a {
+        cursor: pointer;
+        text-decoration: none;
+        margin-right: $gutter-sm;
+
+        &:visited {
+          color: $black;
+        }
+      }
+    }
+
+    button {
+      margin-top: 2em;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .navbar {
+    nav {
+      .link-container {
+        width: 40vw;
+        margin-left: 30vw;
+      }
+    }
+  }
+}
+
+@media (max-width: 650px) {
+  .navbar {
+    nav {
+      .link-container {
+        width: 45vw;
+        margin-left: 20vw;
+      }
+    }
+  }
+}
