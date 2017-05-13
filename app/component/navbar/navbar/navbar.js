@@ -12,12 +12,12 @@ function NavbarController($log, $location, $rootScope, authService) {
   this.checkPath = function() {
     let path = $location.path();
 
-    if (path === '/login' || path === '/home' || path === '/chapters') {
-      this.hideButtons = true;
+    if (path === '/login') {
+      this.hideNavbarClient = true;
     }
 
-    if (path !== '/login' || path !== '/home' || path !== '/chapters') {
-      this.hideButtons = false;
+    if (path !== '/login') {
+      this.hideNavbarClient = false;
       authService.getToken()
       .catch(() => {
         $location.url('/');

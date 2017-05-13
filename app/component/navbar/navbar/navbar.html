@@ -1,6 +1,7 @@
 <section class="navbar">
+  <navbar-client ng-hide="!navbarCtrl.hideNavbarClient"></navbar-client>
 
-  <nav>
+  <nav ng-hide="navbarCtrl.hideNavbarClient">
     <h1>MRS Novel</h1>
     <ul class="primary">
       <li>
@@ -8,16 +9,12 @@
         <ul class="sub">
           <li><a href="/#!/home">Home</a></li>
   				<li><a href="/#!/chapters">Chapters</a></li>
-          <li><a href="/#!/login">Admin Login</a></li>
-          <li ng-hide="navbarCtrl.hideButtons">
+          <li><a href="/#!/admin">Admin</a></li>
+          <li>
             <span class="logout-btn" ng-click="navbarCtrl.logout()">Logout</span>
           </li>
         </ul>
       </li>
     </ul>
-
-    <div ng-hide="navbarCtrl.hideButtons">
-      <button class="logout-btn" ng-click="navbarCtrl.logout()">logout</button>
-    </div>
   </nav>
 </section>
