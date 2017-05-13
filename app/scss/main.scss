@@ -1,5 +1,10 @@
 @import './lib/base/reset';
+@import './lib/theme/vars';
 @import './lib/base/base';
+
+
+@import '../component/navbar/navbar/navbar';
+@import '../component/navbar/navbar-client/navbar-client';
 
 @import '../component/manuscript/manuscript-item/manuscript-item';
 

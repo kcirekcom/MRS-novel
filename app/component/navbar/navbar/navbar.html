@@ -1,0 +1,20 @@
+<section class="navbar">
+  <navbar-client ng-hide="!navbarCtrl.hideNavbarClient"></navbar-client>
+
+  <nav ng-hide="navbarCtrl.hideNavbarClient">
+    <h1>MRS Novel</h1>
+    <ul class="primary">
+      <li>
+        <a href="">Go &#x2193;</a>
+        <ul class="sub">
+          <li><a href="/#!/home">Home</a></li>
+  				<li><a href="/#!/chapters">Chapters</a></li>
+          <li><a href="/#!/admin">Admin</a></li>
+          <li>
+            <span class="logout-btn" ng-click="navbarCtrl.logout()">Logout</span>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+</section>
