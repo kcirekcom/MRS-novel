@@ -1,13 +1,15 @@
 @import './lib/base/reset';
+@import url('https://fonts.googleapis.com/css?family=Delius');
 @import './lib/theme/vars';
 @import './lib/base/base';
 
 
 @import '../component/navbar/navbar/navbar';
-@import '../component/navbar/navbar-admin/navbar-admin';
 
 @import '../component/manuscript/manuscript-item/manuscript-item';
 
 @import '../component/manuscript/create-chapter/create-chapter';
 @import '../component/manuscript/chapter-item/chapter-item';
 @import '../component/manuscript/edit-chapter/edit-chapter';
+
+@import '../component/manuscript/chapter/chapter';

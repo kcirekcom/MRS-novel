@@ -21,3 +21,17 @@ h3 {
   font-size: 1.25em;
   font-style: oblique;
 }
+
+@media (max-width: 500px) {
+  input[type="text"] {
+    width: 100%;
+    padding: 1.5vw 2vw;
+    font-size: $font-std;
+    border: solid 0.1vw #95989a;
+    box-sizing: border-box;
+  }
+
+  input[type="password"] {
+    @extend input[type="text"];
+  }
+}

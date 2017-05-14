@@ -1,0 +1,25 @@
+<li class="chapter">
+  <div class="current-item">
+
+    <div class="time-label">
+      <span>{{chapterCtrl.chapter.timestamp | date: 'MMM d, y h:mm a'}}</span>
+    </div>
+
+    <div class="title-label">
+      <span>{{chapterCtrl.chapter.title}}</span>
+    </div>
+
+    <div class="body-label">
+      <span ng-bind-html="chapterCtrl.chapter.body | limitTo: chapterCtrl.numLimit">{{chapterCtrl.chapter.body}}</span>
+
+      <div class="read-more">
+        <div class="blur" ng-if="!chapterCtrl.showReadMore"></div>
+        <span ng-if="!chapterCtrl.showReadMore" ng-click="chapterCtrl.readMore(); chapterCtrl.showReadMore = !chapterCtrl.showReadMore">read more &rarr;</span>
+      </div>
+
+      <div class="read-less" ng-if="chapterCtrl.showReadMore">
+        <span ng-click="chapterCtrl.readLess(); chapterCtrl.showReadMore = !chapterCtrl.showReadMore">&larr; read less</span>
+      </div>
+    </div>
+  </div>
+</li>

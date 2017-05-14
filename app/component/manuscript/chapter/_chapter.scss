@@ -1,0 +1,12 @@
+.chapter {
+  @extend .chapter-item;
+
+  .time-label, .title-label {
+    margin-left: 10vw;
+    margin-bottom: 1.5em;
+  }
+
+  .read-more, .read-less {
+    margin-left: 10vw;
+  }
+}
