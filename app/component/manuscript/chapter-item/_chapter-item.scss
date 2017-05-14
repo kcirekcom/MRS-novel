@@ -4,7 +4,7 @@
 
   width: 90vw;
   margin: 2em auto;
-  
+
   .blur {
     position: absolute;
     background: white;
@@ -51,6 +51,7 @@
 
   .time-label span {
     font-weight: bold;
+    font-family: 'Helvetica', sans-serif;
   }
 
   .word-count button, .update-container button:nth-child(1) {

@@ -1,7 +1,13 @@
 .manuscript-item {
-  // span {
-  //   margin-bottom: 20px;
-  // }
+  width: 90vw;
+  margin: 1.5em auto;
 
+  h3 {
+    margin-left: 0;
+  }
 
+  .marg-bottom {
+    display: block;
+    margin-bottom: 1.5em;
+  }
 }
