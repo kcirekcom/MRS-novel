@@ -62,4 +62,16 @@
     float: left;
     margin-right: 5vw;
   }
+
+  @media (max-width: 850px) {
+    .right {
+      clear: both;
+    }
+
+    .body-label {
+      p {
+        width: 90vw;
+      }
+    }
+  }
 }

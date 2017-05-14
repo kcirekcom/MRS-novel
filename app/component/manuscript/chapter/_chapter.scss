@@ -6,7 +6,17 @@
     margin-bottom: 1.5em;
   }
 
+  .title-label {
+    font-family: 'Delius', cursive;
+  }
+
   .read-more, .read-less {
     margin-left: 10vw;
+  }
+
+  @media (max-width: 850px) {
+    .time-label, .title-label, .read-more, .read-less {
+      margin-left: 0;
+    }
   }
 }
