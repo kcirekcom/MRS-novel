@@ -5,6 +5,16 @@
   font-family: $font-primary;
 }
 
+button {
+  border-radius: 5px;
+  background-color: $white;
+}
+
+.btn-std:hover {
+  cursor: pointer;
+  background: $brand-primary;
+}
+
 h2 {
   clear: both;
   margin-left: 5vw;

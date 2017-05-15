@@ -5,7 +5,7 @@
     background: $black;
 
     h1 {
-      color: white;
+      color: $brand-primary;
       float: left;
       font-family: 'Delius', cursive;
       margin-top: 1.5em;
@@ -15,7 +15,7 @@
 
     a {
       text-decoration: none;
-      color: #fff;
+      color: $brand-primary;
       display: block;
     }
 
@@ -90,18 +90,14 @@
       background: #fff;
     }
 
-    ul.primary li:hover a {
-      background: #fff;
+    ul.primary li:hover a, span {
+      background: $brand-primary;
       color: #666;
       text-shadow: none;
     }
 
     ul.primary li:hover > a{
       color: #000;
-    }
-
-    button {
-      position: relative;
     }
   }
 }
