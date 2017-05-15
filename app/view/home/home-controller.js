@@ -1,8 +1,7 @@
 'use strict';
 
-module.exports = ['$log', '$rootScope', HomeController];
+module.exports = ['$log', HomeController];
 
-function HomeController($log, $rootScope) {
+function HomeController($log) {
   $log.debug('HomeController');
-
 }
