@@ -2,9 +2,12 @@
   <div class="chapter-container">
     <h3>Chapters</h3>
 
+    <div class="search">
+      <input class="input-std" type="text" ng-model="chaptersCtrl.chapterSearchTerm" placeholder="search chapter titles"/>    
+    </div>
     <ul>
       <chapter
-        ng-repeat="item in chaptersCtrl.chaptersArray"
+        ng-repeat="item in chaptersCtrl.chaptersArray | chapterSearch: chaptersCtrl.chapterSearchTerm"
         chapter="item">
       </chapter>
     </ul>
