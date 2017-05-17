@@ -1,15 +1,21 @@
 .home {
   h3 {
     width: 60vw;
-    margin: 10em auto;
+    margin: 4.5em auto;
     margin-bottom: 1.5em;
     text-align: center;
     font-family: 'Delius', cursive;
   }
 
   p {
-    width: 60vw;
+    width: 70vw;
     margin: 0 auto;
     line-height: 5vh;
+  }
+
+  @media (max-width: 850px) {
+    p {
+      width: 90vw;
+    }
   }
 }
