@@ -3,6 +3,9 @@
 @import './lib/theme/vars';
 @import './lib/base/base';
 
+@import './lib/layout/content';
+@import './lib/layout/header';
+@import './lib/layout/footer';
 
 @import '../component/navbar/navbar/navbar';
 

@@ -1,0 +1,9 @@
+footer {
+  height: 4em;
+  color: $brand-primary;
+  background: linear-gradient(top,  $brand-tertiary,  $brand-secondary);
+  background: -ms-linear-gradient(top, $brand-tertiary,  $brand-secondary);
+  background: -webkit-gradient(linear, left top, left bottom, from($brand-tertiary), to($brand-secondary));
+  background: -moz-linear-gradient(top, $brand-tertiary, $brand-secondary);
+  box-shadow: 0px 2px 8px $black;
+}
