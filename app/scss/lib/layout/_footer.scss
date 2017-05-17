@@ -1,9 +1,18 @@
 footer {
   height: 4em;
   color: $brand-primary;
-  background: linear-gradient(top,  $brand-tertiary,  $brand-secondary);
-  background: -ms-linear-gradient(top, $brand-tertiary,  $brand-secondary);
-  background: -webkit-gradient(linear, left top, left bottom, from($brand-tertiary), to($brand-secondary));
-  background: -moz-linear-gradient(top, $brand-tertiary, $brand-secondary);
+  background: linear-gradient(top,  $brand-secondary,  $brand-tertiary);
+  background: -ms-linear-gradient(top, $brand-secondary,  $brand-tertiary);
+  background: -webkit-gradient(linear, left top, left bottom, from($brand-secondary), to($brand-tertiary));
+  background: -moz-linear-gradient(top, $brand-secondary, $brand-tertiary);
   box-shadow: 0px 2px 8px $black;
+
+  text-align: center;
+  font-family: 'Delius', cursive;
+  padding-top: 3em;
+
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
 }
