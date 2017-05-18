@@ -1,0 +1,19 @@
+.home {
+  h3 {
+    width: 60vw;
+    margin: 6em auto 1.5em;
+    text-align: center;
+  }
+
+  p {
+    width: 70vw;
+    margin: 0 auto;
+    line-height: 5vh;
+  }
+
+  @media (max-width: 850px) {
+    p {
+      width: 90vw;
+    }
+  }
+}

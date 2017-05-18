@@ -1,48 +1,25 @@
-@media (max-width: 900px) {
-  .navbar {
-    nav {
-      h1 {
-        margin-right: $box-std;
-      }
-
-      // ul.sub {
-      //   width: 50%;
-      // }
-    }
-  }
-}
-
-@media (max-width: 650px) {
-  .navbar {
-      h1 {
-        margin-right: $box-sm;
-      }
-
-      // ul.sub {
-      //   width: 40%;
-      // }
-    }
-
-}
-
 .navbar {
 
   nav {
     height: 4em;
-    background: $black;
+    background: linear-gradient(top,  $brand-tertiary,  $brand-secondary);
+    background: -ms-linear-gradient(top, $brand-tertiary,  $brand-secondary);
+    background: -webkit-gradient(linear, left top, left bottom, from($brand-tertiary), to($brand-secondary));
+    background: -moz-linear-gradient(top, $brand-tertiary, $brand-secondary);
+    box-shadow: 0px 2px 8px $black;
 
     h1 {
-      color: white;
+      color: $brand-primary;
       float: left;
-      font-family: $font-primary;
+      font-family: 'Delius', cursive;
       margin-top: 1.5em;
-      margin-left: $gutter-std;
-      margin-right: $box-std + 20%;
+      margin-left: $gutter-lg + 5%;
+      margin-right: $box-std + 15%;
     }
 
     a {
       text-decoration: none;
-      color: #fff;
+      color: $brand-primary;
       display: block;
     }
 
@@ -87,6 +64,7 @@
       box-sizing: border-box;
       border: 1px solid black;
       border-top: none;
+      box-shadow: 2px 2px 6px $black;
 
       li {
         float: none;
@@ -101,7 +79,6 @@
 
         span {
           cursor: pointer;
-          color: blue;
         }
 
         &:last-child {
@@ -117,8 +94,8 @@
       background: #fff;
     }
 
-    ul.primary li:hover a {
-      background: #fff;
+    ul.primary li:hover a, span {
+      background: $brand-primary;
       color: #666;
       text-shadow: none;
     }
@@ -126,9 +103,47 @@
     ul.primary li:hover > a{
       color: #000;
     }
+  }
+}
 
-    button {
-      position: relative;
+@media (max-width: 900px) {
+  .navbar {
+    nav {
+      h1 {
+        margin-right: $box-std + 5%;
+      }
+
+      ul.sub {
+        width: 25%;
+      }
+    }
+  }
+}
+
+@media (max-width: 650px) {
+  .navbar {
+    nav {
+      h1 {
+        margin-right: $box-std - 5%;
+      }
+
+      ul.sub {
+        width: 30%;
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .navbar {
+    nav {
+      h1 {
+        margin-right: $box-sm;
+      }
+
+      ul.sub {
+        width: 40%;
+      }
     }
   }
 }

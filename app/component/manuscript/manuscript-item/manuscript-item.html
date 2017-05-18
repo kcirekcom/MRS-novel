@@ -2,12 +2,12 @@
   <div class="current-item" ng-if="!manuscriptItemCtrl.changeEdit.showEditManuscript">
     <div class="title-label">
       <span class="item-label">title:</span>
-      <span>{{manuscriptItemCtrl.manuscript.title}}</span>
+      <span class="marg-bottom">{{manuscriptItemCtrl.manuscript.title}}</span>
     </div>
 
     <div class="desc-label">
       <span class="item-label">description:</span>
-      <span>{{manuscriptItemCtrl.manuscript.desc}}</span>
+      <span class="marg-bottom">{{manuscriptItemCtrl.manuscript.desc}}</span>
     </div>
 
     <div class="update-container" ng-if="!manuscriptItemCtrl.changeEdit.showEditManuscript">
@@ -22,6 +22,8 @@
 
   <h3>Chapters</h3>
 
-  <chapter-item ng-repeat="item in manuscriptItemCtrl.manuscript.chapters | orderBy:'-timestamp'"
-  chapter="item" manuscript="manuscriptItemCtrl.manuscript"></chapter-item>
+  <ul class="overflow">
+    <chapter-item ng-repeat="item in manuscriptItemCtrl.manuscript.chapters | orderBy:'-timestamp'"
+    chapter="item" manuscript="manuscriptItemCtrl.manuscript"></chapter-item>
+  </ul>
 </li>

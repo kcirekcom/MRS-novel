@@ -12,12 +12,10 @@ function NavbarController($log, $location, $rootScope, authService) {
   this.checkPath = function() {
     let path = $location.path();
 
-    if (path === '/login') {
-      this.hideNavbarClient = true;
-    }
+    this.hideNavbarAdmin = true;
 
-    if (path !== '/login') {
-      this.hideNavbarClient = false;
+    if (path === '/admin') {
+      this.hideNavbarAdmin = false;
       authService.getToken()
       .catch(() => {
         $location.url('/');
@@ -34,7 +32,7 @@ function NavbarController($log, $location, $rootScope, authService) {
   this.logout = function() {
     $log.log('navbarCtrl.logout()');
 
-    this.hideButtons = true;
+    this.hideNavbarAdmin = true;
     authService.logout()
     .then(() => {
       $location.url('/login');

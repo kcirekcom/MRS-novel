@@ -27,5 +27,4 @@ function ManuscriptItemController($log, manuscriptService) {
       $log.error(err.message);
     });
   };
-
 }

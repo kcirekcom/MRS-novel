@@ -1,5 +1,18 @@
 .manuscript-item {
+  width: 90vw;
+  margin: 1.5em auto;
 
+  h3 {
+    margin-left: 0;
+  }
 
+  .marg-bottom {
+    display: block;
+    margin-bottom: 1.5em;
+  }
 
+  .overflow {
+    height: 40em;
+    overflow: auto;
+  }
 }

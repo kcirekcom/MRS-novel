@@ -1,7 +1,9 @@
 // *** colors ***
 $black: #000;
 $white: #fff;
-$brand-primary: #a8ccec;
+$brand-primary: #fff5f1;
+$brand-secondary: #18babd;
+$brand-tertiary: #9dd6d6;
 
 // *** box-sizes ***
 $box-std: 40%;
@@ -14,9 +16,9 @@ $gutter-sm: $gutter-std / 2;
 $gutter-lg: $gutter-std * 2;
 
 // *** font-types ***
-$font-primary: 'Helvetica Neue', Helvetica, sans-serif;
+$font-primary: 'Helvetica', sans-serif;
 
 // *** font-sizes ***
 $font-lg: 5vw;
-$font-std: 2vw;
+$font-std: 3vw;
 $font-sm: 1vw;

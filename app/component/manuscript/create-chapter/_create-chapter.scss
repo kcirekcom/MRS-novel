@@ -2,10 +2,6 @@
   width: 90vw;
   margin: 2em auto;
 
-  h3 {
-    margin-left: 0;
-  }
-
   .chapter-form {
     float: left;
 
@@ -14,10 +10,11 @@
 
     margin-right: 5vw;
     margin-bottom: 2em;
+  }
 
-    .item-label {
-      display: block;
-      margin-bottom: 1.5em;
+  @media (max-width: 530px) {
+    .chapter-form {
+      width: 90vw;
     }
   }
 }

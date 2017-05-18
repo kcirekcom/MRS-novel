@@ -1,8 +1,8 @@
 'use strict';
 
-module.exports = ['$log', '$location', '$rootScope', 'authService', AdminLoginController];
+module.exports = ['$log', '$location', AdminLoginController];
 
-function AdminLoginController($log, $location, authService) {
+function AdminLoginController($log, $location) {
   let url = $location.url();
   this.showLogin = url === '/login';
 }

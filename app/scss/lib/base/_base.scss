@@ -1,23 +1,66 @@
-.input-std {
-  width: 20vw;
-  margin-bottom: 2.5em;
-}
-
 .item-label {
   display: block;
   margin-bottom: 1.5em;
+  font-weight: bold;
+  font-family: $font-primary;
+}
+
+button {
+  border-radius: 5px;
+  background-color: $white;
+}
+
+.btn-std:hover {
+  cursor: pointer;
+  background: $brand-tertiary;
 }
 
 h2 {
   clear: both;
   margin-left: 5vw;
-  margin-bottom: 1.25em;
+  margin-bottom: 1.15em;
   font-size: 1.5em;
   font-weight: bold;
+  font-family: 'Delius', cursive;
 }
 
 h3 {
   @extend h2;
   font-size: 1.25em;
   font-style: oblique;
+}
+
+.input-std {
+  width: 50%;
+  padding: 0.75vw 1vw;
+  font-size: $font-sm;
+  border: solid 0.1vw #95989a;
+  box-sizing: border-box;
+  margin-bottom: 2.5em;
+
+  &:focus {
+    background: $brand-primary;
+  }
+}
+
+@media (max-width: 950px) {
+  .input-std {
+    width: 60%;
+    font-size: 1.3vw;
+  }
+}
+
+@media (max-width: 650px) {
+  .input-std {
+    width: 70%;
+    padding: 1.5vw 2vw;
+    font-size: 2vw;
+  }
+}
+
+@media (max-width: 500px) {
+  .input-std {
+    width: 100%;
+    font-size: $font-std;
+  }
 }

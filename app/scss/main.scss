@@ -1,13 +1,28 @@
 @import './lib/base/reset';
+@import url('https://fonts.googleapis.com/css?family=Delius');
 @import './lib/theme/vars';
 @import './lib/base/base';
 
+@import './lib/layout/content';
+@import './lib/layout/header';
+@import './lib/layout/footer';
 
 @import '../component/navbar/navbar/navbar';
-@import '../component/navbar/navbar-client/navbar-client';
+@import '../component/site-footer/site-footer/site-footer';
 
+@import '../component/manuscript/create-manuscript/create-manuscript';
 @import '../component/manuscript/manuscript-item/manuscript-item';
+@import '../component/manuscript/edit-manuscript/edit-manuscript';
 
 @import '../component/manuscript/create-chapter/create-chapter';
 @import '../component/manuscript/chapter-item/chapter-item';
 @import '../component/manuscript/edit-chapter/edit-chapter';
+
+@import '../component/manuscript/chapter/chapter';
+
+@import '../component/admin/login/login';
+
+@import '../view/home/home';
+@import '../view/admin-login/admin-login';
+@import '../view/admin-home/admin-home';
+@import '../view/chapters/chapters';
