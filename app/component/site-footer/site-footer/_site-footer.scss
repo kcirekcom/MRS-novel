@@ -1,0 +1,36 @@
+.site-footer {
+  height: 7em;
+  color: $brand-primary;
+  background: linear-gradient(top,  $brand-secondary,  $brand-tertiary);
+  background: -ms-linear-gradient(top, $brand-secondary,  $brand-tertiary);
+  background: -webkit-gradient(linear, left top, left bottom, from($brand-secondary), to($brand-tertiary));
+  background: -moz-linear-gradient(top, $brand-secondary, $brand-tertiary);
+  box-shadow: 0px 2px 8px $black;
+
+  text-align: center;
+  font-family: 'Delius', cursive;
+
+  span {
+    margin-top: 3em;
+    display: inline-block;
+    width: 90%;
+  }
+
+  @media (max-width: 850px) {
+    span {
+      margin-top: 2.5em;
+    }
+  }
+
+  @media (max-width: 850px) {
+    span {
+      margin-top: 2.5em;
+    }
+  }
+
+  @media (max-width: 475px) {
+    span {
+      margin-top: 2em;
+    }
+  }
+}
