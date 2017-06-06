@@ -7,7 +7,7 @@
     </div>
     <ul>
       <chapter
-        ng-repeat="item in chaptersCtrl.chaptersArray | chapterSearch: chaptersCtrl.chapterSearchTerm | orderBy:'-timestamp'"
+        ng-repeat="item in chaptersCtrl.chaptersArray | orderBy:'-timestamp' | chapterSearch: chaptersCtrl.chapterSearchTerm"
         chapter="item">
       </chapter>
     </ul>
