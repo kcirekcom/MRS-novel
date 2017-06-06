@@ -10,7 +10,7 @@
     </div>
 
     <div class="body-label">
-      <span class="fade" ng-bind-html="chapterCtrl.chapter.body | limitTo: chapterCtrl.numLimit">{{chapterCtrl.chapter.body}}</span>
+      <span ng-bind-html="chapterCtrl.chapter.body | limitTo: chapterCtrl.numLimit">{{chapterCtrl.chapter.body}}</span>
 
       <div class="read-more">
         <div class="blur" ng-if="!chapterCtrl.showReadMore"></div>
