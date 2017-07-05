@@ -3,4 +3,27 @@
     margin-left: 0;
     margin-bottom: 1.5em;
   }
+
+  input {
+    text-align: center;
+    width: 25%;
+
+    &:focus {
+      text-align: left;
+      width: 50%;
+      transition: all 0.3s linear;
+      -webkit-transition: all 0.3s linear;
+      -moz-transition: all 0.3s linear;
+    }
+  }
+
+  @media (max-width: 650px) {
+    input {
+      width: 50%;
+
+      &:focus {
+        width: 100%;
+      }
+    }
+  }
 }
