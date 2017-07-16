@@ -1,7 +1,19 @@
 <li class="chapter">
   <div class="current-item">
 
-    <div class="title-label">
+    <uib-accordion>
+        <div uib-accordion-group heading="{{chapterCtrl.chapter.title}}">
+          <div class="time-label">
+            <span>{{chapterCtrl.chapter.timestamp | date: 'MMM d, y h:mm a'}}</span>
+          </div>
+
+          <div class="body-label">
+            <span ng-bind-html="chapterCtrl.chapter.body">{{chapterCtrl.chapter.body}}</span>
+          </div>
+        </div>
+    </uib-accordion>
+
+    <!-- <div class="title-label">
       <span>{{chapterCtrl.chapter.title}}</span>
     </div>
 
@@ -20,6 +32,6 @@
       <div class="read-less" ng-if="chapterCtrl.showReadMore">
         <span ng-click="chapterCtrl.readLess(); chapterCtrl.showReadMore = !chapterCtrl.showReadMore">&larr; read less</span>
       </div>
-    </div>
+    </div> -->
   </div>
 </li>

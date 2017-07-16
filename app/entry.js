@@ -9,9 +9,10 @@ const pascalcase = require('pascalcase');
 const uiRouter = require('angular-ui-router');
 const ngAnimate = require('angular-animate');
 const ngSanitize = require('angular-sanitize');
+const uiBootstrap = require('angular-ui-bootstrap');
 require('angular-ui-tinymce');
 
-const mrsnovel = angular.module('mrsnovel', [ngAnimate, uiRouter, ngSanitize, 'ui.tinymce']);
+const mrsnovel = angular.module('mrsnovel', [ngAnimate, uiRouter, ngSanitize, uiBootstrap, 'ui.tinymce']);
 
 let context = require.context('./config/', true, /\.js$/);
 context.keys().forEach(path => {
