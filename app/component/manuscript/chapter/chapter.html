@@ -2,17 +2,17 @@
   <div class="current-item">
 
     <uib-accordion>
-        <div class="title-label" uib-accordion-group heading="{{chapterCtrl.chapter.title}}">
-          <div class="time-label">
-            <span>{{chapterCtrl.chapter.timestamp | date: 'MMM d, y h:mm a'}}</span>
-          </div>
+      <button class="btn-std" ng-click="status.open = !status.open">collapse</button>
 
-          <div class="body-label">
-            <span ng-bind-html="chapterCtrl.chapter.body">{{chapterCtrl.chapter.body}}</span>
-          </div>
-
-          <button>collapse</button>
+      <div uib-accordion-group heading="{{chapterCtrl.chapter.title}}" class="title-label" is-open="status.open" >
+        <div class="time-label">
+          <span>{{chapterCtrl.chapter.timestamp | date: 'MMM d, y h:mm a'}}</span>
         </div>
+
+        <div class="body-label">
+          <span ng-bind-html="chapterCtrl.chapter.body">{{chapterCtrl.chapter.body}}</span>
+        </div>
+      </div>
     </uib-accordion>
 
     <!-- <div class="title-label">
