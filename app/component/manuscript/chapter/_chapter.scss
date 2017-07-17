@@ -1,6 +1,11 @@
 .chapter {
   @extend .chapter-item;
 
+  .current-item button {
+    margin: 30px 0px 45px 11%;
+    padding: 0px 8px;
+  }
+
   .time-label, .title-label {
     margin-left: 0;
     margin-bottom: 1em;

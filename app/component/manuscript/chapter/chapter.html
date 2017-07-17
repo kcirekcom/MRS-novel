@@ -11,7 +11,9 @@
           <span ng-bind-html="chapterCtrl.chapter.body">{{chapterCtrl.chapter.body}}</span>
         </div>
 
-        <button class="btn-std" ng-click="status.open = !status.open; chapterCtrl.scrollUp()">collapse and search for other chapters</button>
+        <div class="center">
+          <button class="btn-std" ng-click="status.open = !status.open; chapterCtrl.scrollUp()">collapse and search for other chapters</button>
+        </div>
       </div>
     </uib-accordion>
 
