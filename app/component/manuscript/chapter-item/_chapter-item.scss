@@ -8,11 +8,15 @@
   .blur {
     position: absolute;
     background: $white;
-    width: 100%;
+    width: 105%;
     padding: 2em;
     bottom: -1em;
     right: -2vw;
     -webkit-filter: blur(5px);
+  }
+
+  .read-more {
+    margin-bottom: 10vh;
   }
 
   .read-more span, .read-less span {
@@ -46,7 +50,7 @@
 
   .title-label span {
     display: block;
-    margin-bottom: 0;
+    margin-bottom: 1.5em;
   }
 
   .time-label span {
