@@ -38,6 +38,17 @@ function ChapterItemController($log, $window, chapterService) {
   this.deleteChapter = function() {
     $log.debug('chapterItemCtrl.deleteChapter()');
 
+    let confirmed = $window.confirm('Are you sure that you want to delete this chapter?');
+
+    if (confirmed) {
+      $window.alert('This chapter has been deleted.');
+    }
+
+    if (!confirmed) {
+      $log.log('chapter not deleted');
+      return false;
+    }
+
     chapterService.deleteChapter(this.manuscript, this.chapter)
     .then(() => {
       $log.log('chapter deleted');

@@ -1,13 +1,23 @@
 .chapter {
   @extend .chapter-item;
 
-  .time-label, .title-label {
-    margin-left: 10vw;
-    margin-bottom: 1.5em;
+  .current-item button {
+    margin: 30px 0px 45px 11%;
+    padding: 0px 8px;
   }
 
-  .title-label {
-    font-family: 'Delius', cursive;
+  .time-label, .title-label {
+    margin-left: 0;
+    margin-bottom: 1em;
+    line-height: 5vh;
+  }
+
+  .time-label {
+    margin-left: 11%;
+  }
+
+  .title-label span {
+    margin-bottom: 0;
   }
 
   .read-more, .read-less {
@@ -15,8 +25,14 @@
   }
 
   @media (max-width: 850px) {
-    .time-label, .title-label, .read-more, .read-less {
+    .title-label, .read-more, .read-less {
       margin-left: 0;
+    }
+
+    .body-label {
+      p {
+        width: 70vw;
+      }
     }
   }
 }
