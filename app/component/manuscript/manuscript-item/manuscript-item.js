@@ -20,14 +20,14 @@ function ManuscriptItemController($log, $window, manuscriptService) {
   this.deleteManuscript = function() {
     $log.debug('manuscriptItemCtrl.deleteManuscript()');
 
-    let confirmed = $window.confirm('Are you sure that you want to delete this chapter?');
+    let confirmed = $window.confirm('Are you sure that you want to delete this manuscript?');
 
     if (confirmed) {
-      $window.alert('This chapter has been deleted.');
+      $window.alert('This manuscript has been deleted.');
     }
 
     if (!confirmed) {
-      $log.log('chapter not deleted');
+      $log.log('manuscript not deleted');
       return false;
     }
 
