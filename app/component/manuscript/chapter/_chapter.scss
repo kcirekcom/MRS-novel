@@ -2,12 +2,13 @@
   @extend .chapter-item;
 
   .time-label, .title-label {
-    margin-left: 10vw;
-    margin-bottom: 1.5em;
+    margin-left: 0;
+    margin-bottom: 1em;
+    line-height: 5vh;
   }
 
-  .title-label {
-    font-family: 'Delius', cursive;
+  .time-label {
+    margin-left: 11%;
   }
 
   .read-more, .read-less {
@@ -15,8 +16,14 @@
   }
 
   @media (max-width: 850px) {
-    .time-label, .title-label, .read-more, .read-less {
+    .title-label, .read-more, .read-less {
       margin-left: 0;
+    }
+
+    .body-label {
+      p {
+        width: 70vw;
+      }
     }
   }
 }
