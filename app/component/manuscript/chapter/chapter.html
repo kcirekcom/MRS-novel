@@ -2,9 +2,7 @@
   <div class="current-item">
 
     <uib-accordion>
-      <button class="btn-std" ng-click="status.open = !status.open">collapse</button>
-
-      <div uib-accordion-group heading="{{chapterCtrl.chapter.title}}" class="title-label" is-open="status.open" >
+      <div uib-accordion-group heading="{{chapterCtrl.chapter.title}}" class="title-label" is-open="status.open">
         <div class="time-label">
           <span>{{chapterCtrl.chapter.timestamp | date: 'MMM d, y h:mm a'}}</span>
         </div>
@@ -12,6 +10,8 @@
         <div class="body-label">
           <span ng-bind-html="chapterCtrl.chapter.body">{{chapterCtrl.chapter.body}}</span>
         </div>
+
+        <button class="btn-std" ng-click="status.open = !status.open; chapterCtrl.scrollUp()">collapse and search for other chapters</button>
       </div>
     </uib-accordion>
 
