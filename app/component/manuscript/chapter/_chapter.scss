@@ -1,6 +1,9 @@
 .chapter {
   @extend .chapter-item;
 
+  border-top: none;
+  padding-top: 0;
+
   .current-item button {
     margin: 30px 0px 10px 11%;
     padding: 0px 8px;
