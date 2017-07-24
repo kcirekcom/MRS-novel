@@ -9,6 +9,8 @@ module.exports = {
 function LoginController($log, $location, authService) {
   $log.debug('LoginController');
 
+  this.invalid = true;
+
   authService.getToken()
   .then(() => {
     $location.url('/admin');
@@ -20,6 +22,10 @@ function LoginController($log, $location, authService) {
     authService.adminLogin(this.user)
     .then(() => {
       $location.url('/admin');
+    })
+    .catch(err => {
+      this.invalid = false;
+      $log.error(err.message);
     });
   };
 }

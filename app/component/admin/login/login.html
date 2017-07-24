@@ -1,34 +1,35 @@
 <section class="login">
   <h3>Admin Login</h3>
 
+  <span ng-hide='loginCtrl.invalid'>Email and/or password is invalid.</span>
+
   <form
     class="login-form"
     name="loginForm"
     ng-submit="loginCtrl.login()" novalidate>
-    <div
-      ng-class="{
-        'error': loginForm.email.$invalid,
-        'success': loginForm.email.$valid,
-      }">
-      <input type="text"
+
+    <div>
+      <input
+        type="text"
         name="email"
         placeholder="email"
         ng-minlength="10"
         ng-model="loginCtrl.user.email"
         class="input-std" required>
+
+        <span ng-show="loginForm.email.$touched && loginForm.email.$invalid">Email is required.</span>
     </div>
 
-    <div
-      ng-class="{
-        'error': loginForm.password.$invalid && loginForm.$submitted,
-        'success': loginForm.password.$valid,
-      }">
-      <input type="password" name="password"
-        ng-disabled="loginForm.username.$invalid"
+    <div>
+      <input
+        type="password"
+        name="password"
         placeholder="password"
         ng-minlength="6"
         ng-model="loginCtrl.user.password"
         class="input-std" required>
+
+        <span ng-show="loginForm.password.$touched && loginForm.password.$invalid">Password is required.</span>
     </div>
 
     <button class="btn-std">login</button>

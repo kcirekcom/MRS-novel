@@ -1,4 +1,6 @@
 .login {
+  position: relative;
+
   h3 {
     margin-left: 0;
     margin-bottom: 1.5em;
@@ -15,6 +17,13 @@
       -webkit-transition: all 0.3s linear;
       -moz-transition: all 0.3s linear;
     }
+  }
+
+  span {
+    display: block;
+    color: red;
+    margin-top: -25px;
+    margin-bottom: 9px;
   }
 
   @media (max-width: 650px) {
