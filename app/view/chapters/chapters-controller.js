@@ -26,8 +26,4 @@ function ChaptersController($log, $rootScope, chapterService){
   };
 
   this.fetchAllChaptersFromDB();
-
-  $rootScope.$on('$locationChangeSuccess', () => {
-    this.fetchAllChaptersFromDB();
-  });
 }
