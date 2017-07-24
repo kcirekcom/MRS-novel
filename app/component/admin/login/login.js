@@ -24,8 +24,8 @@ function LoginController($log, $location, authService) {
       $location.url('/admin');
     })
     .catch(err => {
-      this.invalid = false;
       $log.error(err.message);
+      this.invalid = false;
     });
   };
 }
