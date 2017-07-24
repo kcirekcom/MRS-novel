@@ -1,4 +1,5 @@
 .login {
+
   h3 {
     margin-left: 0;
     margin-bottom: 1.5em;
@@ -6,24 +7,21 @@
 
   input {
     text-align: center;
-    width: 25%;
+    width: 150px;
 
     &:focus {
       text-align: left;
-      width: 50%;
+      width: 300px;
       transition: all 0.3s linear;
       -webkit-transition: all 0.3s linear;
       -moz-transition: all 0.3s linear;
     }
   }
 
-  @media (max-width: 650px) {
-    input {
-      width: 50%;
-
-      &:focus {
-        width: 100%;
-      }
-    }
+  span {
+    display: block;
+    color: red;
+    margin-top: -25px;
+    margin-bottom: 9px;
   }
 }
