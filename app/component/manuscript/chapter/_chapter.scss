@@ -1,6 +1,9 @@
 .chapter {
   @extend .chapter-item;
 
+  border-top: none;
+  padding-top: 0;
+
   .current-item button {
     margin: 30px 0px 10px 11%;
     padding: 0px 8px;
@@ -9,7 +12,7 @@
   .time-label, .title-label {
     margin-left: 0;
     margin-bottom: 1em;
-    line-height: 5vh;
+    line-height: 35px;
   }
 
   .time-label {
@@ -22,6 +25,10 @@
 
   .read-more, .read-less {
     margin-left: 10vw;
+  }
+
+  .body-label {
+    margin-bottom: 0;
   }
 
   @media (max-width: 850px) {

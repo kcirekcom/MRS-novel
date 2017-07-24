@@ -1,3 +1,9 @@
 <section class="site-footer">
-  <span>Weekly quote: "My thoughts debated back and forth, cajoling me from one side to the other."</span>
+  <span ng-click="siteFooterCtrl.toggleQuote = !siteFooterCtrl.toggleQuote">Click here for the weekly quote</span>
+
+  <div class="absolute" ng-if="siteFooterCtrl.toggleQuote">
+    <span class="toggle-quote">"My thoughts debated back and forth, cajoling me from one side to the other."
+      <div class="exit-button" ng-click="siteFooterCtrl.toggleQuote = !siteFooterCtrl.toggleQuote">x</div>
+    </span>
+  </div>
 </section>

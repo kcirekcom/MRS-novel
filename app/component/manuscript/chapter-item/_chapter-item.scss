@@ -1,6 +1,8 @@
 .chapter-item {
   list-style-type: none;
   clear: both;
+  border-top: 2px solid #f3f3f3;
+  padding-top: 25px;
 
   width: 90vw;
   margin: 2em auto;
@@ -10,13 +12,13 @@
     background: $white;
     width: 105%;
     padding: 2em;
-    bottom: -1em;
+    bottom: -0.5em;
     right: -2vw;
     -webkit-filter: blur(5px);
   }
 
   .read-more {
-    margin-bottom: 10vh;
+    margin-bottom: 50px;
   }
 
   .read-more span, .read-less span {
@@ -37,10 +39,10 @@
       width: 70vw;
       margin: 0 auto;
       text-indent: 2.5em;
-      line-height: 5vh;
+      line-height: 35px;
     }
 
-    // margin-bottom: 10vh;
+    margin-bottom: 50px;
   }
 
   .word-count span {
