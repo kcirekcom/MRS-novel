@@ -5,6 +5,10 @@ module.exports = ['$log', '$rootScope', 'manuscriptService', AdminHomeController
 function AdminHomeController($log, $rootScope, manuscriptService) {
   $log.debug('AdminHomeController');
 
+  this.loader = {
+    loading: true,
+  };
+
   this.manuscripts = manuscriptService.manuscripts;
 
   this.fetchManuscripts = function() {
@@ -14,6 +18,7 @@ function AdminHomeController($log, $rootScope, manuscriptService) {
         manuscriptService.manuscripts.unshift(manuscript);
       });
       this.currentManuscript = manuscripts[0];
+      this.loader.loading = false;
     })
     .catch(err => {
       $log.error(err.message);
