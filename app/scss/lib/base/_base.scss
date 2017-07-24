@@ -119,23 +119,23 @@ h3 {
 
 //ALL MEDIA QUERIES
 
-@media (max-width: 950px) {
-  .input-std {
-    width: 60%;
-  }
-}
+// @media (max-width: 950px) {
+//   .input-std {
+//     width: 60%;
+//   }
+// }
 
-@media (max-width: 650px) {
-  .input-std {
-    width: 70%;
-  }
-}
-
-@media (max-width: 500px) {
+@media (max-width: 850px) {
   .input-std {
     width: 100%;
   }
 }
+
+// @media (max-width: 600px) {
+//   .input-std {
+//     width: 100%;
+//   }
+// }
 
 @media (max-width: 350px) {
   .modal-bg .loading-modal {
