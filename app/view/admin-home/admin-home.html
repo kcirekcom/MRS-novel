@@ -1,15 +1,10 @@
 <section class="admin-home">
+  <loader ng-show="adminHomeCtrl.loader.loading"></loader>
+
   <create-manuscript></create-manuscript>
 
   <div class="manuscript-item-container">
     <h2>Manuscripts</h2>
-
-    <div class="modal-bg" ng-show="adminHomeCtrl.loader.loading">
-      <div class="loading-modal">
-        <div class="loading-icon"></div>
-        <span>Loading manuscripts...</span>
-      </div>
-    </div>
 
     <ul>
       <manuscript-item
