@@ -1,13 +1,13 @@
 <section class="chapters">
+  <div class="modal-bg" ng-show="chaptersCtrl.loader.loading">
+    <div class="loading-modal">
+      <div class="loading-icon"></div>
+      <span>Loading chapters...</span>
+    </div>
+  </div>
+
   <div class="chapter-container">
     <h3>Chapters</h3>
-
-    <div class="modal-bg" ng-show="chaptersCtrl.loader.loading">
-      <div class="loading-modal">
-        <div class="loading-icon"></div>
-        <span>Loading chapters...</span>
-      </div>
-    </div>
 
     <div class="search">
       <input class="input-std" type="text" ng-model="chaptersCtrl.chapterSearchTerm" placeholder="search chapter titles"/>
