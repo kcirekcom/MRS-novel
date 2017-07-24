@@ -32,20 +32,6 @@
         animation: heartbeat 0.5s linear infinite;
       }
 
-      @keyframes heartbeat {
-        0% {
-          transform: scale(1.05);
-          -webkit-transform: scale(1.05);
-          -moz-transform: scale(1.05);
-        }
-
-        100% {
-          transform: scale(1.15);
-          -webkit-transform: scale(1.15);
-          -moz-transform: scale(1.15);
-        }
-      }
-
       .book-container {
         position: absolute;
         bottom: 120px;
@@ -62,6 +48,19 @@
         }
       }
 
+      @keyframes heartbeat {
+        0% {
+          transform: scale(1.05);
+          -webkit-transform: scale(1.05);
+          -moz-transform: scale(1.05);
+        }
+
+        100% {
+          transform: scale(1.15);
+          -webkit-transform: scale(1.15);
+          -moz-transform: scale(1.15);
+        }
+      }
 
       span {
         position: relative;
