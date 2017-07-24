@@ -8,4 +8,6 @@ module.exports = {
 
 function SiteFooterController($log) {
   $log.debug('SiteFooterController');
+
+  this.toggleQuote = false;
 }
