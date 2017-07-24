@@ -23,12 +23,17 @@
     margin-bottom: 0;
   }
 
-  .read-more, .read-less {
-    margin-left: 10vw;
-  }
-
   .body-label {
     margin-bottom: 0;
+  }
+
+  .icon-circle-up {
+    font-size: 40px;
+    text-align: center;
+    width: 50px;
+    margin: 30px auto 5px;
+    color: $brand-secondary;
+    cursor: pointer;
   }
 
   @media (max-width: 850px) {
