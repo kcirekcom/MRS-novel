@@ -25,6 +25,7 @@
     position: absolute;
     bottom: 0.25em;
     font-weight: bold;
+    font-family: $font-primary;
     cursor: pointer;
   }
 
@@ -58,7 +59,7 @@
   .time-label span {
     color: $brand-secondary;
     font-weight: bold;
-    font-family: 'Helvetica', sans-serif;
+    font-family: $font-primary;
   }
 
   .word-count button, .update-container button:nth-child(1) {
