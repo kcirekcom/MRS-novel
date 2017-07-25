@@ -20,8 +20,10 @@
 
   span {
     display: block;
+    font-family: $font-primary;
+    font-size: 14.5px;
     color: red;
-    margin-top: -25px;
-    margin-bottom: 9px;
+    margin-top: -24px;
+    margin-bottom: 10px;
   }
 }
