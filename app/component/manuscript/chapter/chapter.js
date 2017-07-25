@@ -2,7 +2,7 @@
 
 module.exports = {
   template: require('./chapter.html'),
-  controller: ['$log', '$window', ChapterController],
+  controller: ['$log', '$window', '$sce', ChapterController],
   controllerAs: 'chapterCtrl',
   bindings: {
     chapter: '<',
@@ -10,8 +10,12 @@ module.exports = {
   }
 };
 
-function ChapterController($log, $window) {
+function ChapterController($log, $window, $sce) {
   $log.debug('ChapterController');
+
+  this.trustAsHtml = function(body) {
+    return $sce.trustAsHtml(body);
+  };
 
   this.scrollUp = function() {
     $window.scrollTo(100, 0);

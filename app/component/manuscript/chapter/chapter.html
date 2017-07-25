@@ -8,7 +8,7 @@
         </div>
 
         <div class="body-label">
-          <span ng-bind-html="chapterCtrl.chapter.body">{{chapterCtrl.chapter.body}}</span>
+          <span ng-bind-html="chapterCtrl.trustAsHtml(chapterCtrl.chapter.body)"></span>
         </div>
 
         <div class="icon-circle-up" ng-click="status.open = !status.open; chapterCtrl.scrollUp()"></div>
