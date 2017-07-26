@@ -6,7 +6,8 @@ module.exports = {
   controllerAs: 'editChapterCtrl',
   bindings: {
     chapter: '<',
-    manuscript: '<'
+    manuscript: '<',
+    changeEdit: '='
   }
 };
 
