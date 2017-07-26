@@ -13,7 +13,9 @@ module.exports = {
 function ChapterItemController($log, $window, chapterService) {
   $log.debug('ChapterItemController');
 
-  this.showEditChapter = false;
+  this.changeEdit = {
+    showEditChapter: false
+  };
 
   this.showReadMore = false;
 
