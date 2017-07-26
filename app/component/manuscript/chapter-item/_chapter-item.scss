@@ -7,6 +7,8 @@
   width: 90vw;
   margin: 2em auto;
 
+  font-family: $font-primary;
+
   .blur {
     position: absolute;
     background: $white;
@@ -25,7 +27,6 @@
     position: absolute;
     bottom: 0.25em;
     font-weight: bold;
-    font-family: $font-primary;
     cursor: pointer;
   }
 
@@ -40,6 +41,7 @@
       width: 70vw;
       margin: 0 auto;
       text-indent: 2.5em;
+      font-size: 14.5px;
       line-height: 35px;
     }
 
@@ -54,6 +56,11 @@
   .title-label span {
     display: block;
     margin-bottom: 1.5em;
+
+  }
+
+  .title-title {
+    font-size: 14.5px;
   }
 
   .time-label span {
