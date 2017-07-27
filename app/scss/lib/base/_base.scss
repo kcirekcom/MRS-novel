@@ -57,6 +57,12 @@ h3 {
   }
 }
 
+textarea {
+  @extend .input-std;
+  resize: vertical;
+  line-height: 20px;
+}
+
 //MEDIA QUERIES
 
 @media (max-width: 850px) {
