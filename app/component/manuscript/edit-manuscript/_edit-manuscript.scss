@@ -2,4 +2,10 @@
   .edit-manuscript-container {
     width: 70vw;
   }
+
+  @media (max-width: 850px) {
+    .edit-manuscript-container {
+      width: 90vw;
+    }
+  }
 }
