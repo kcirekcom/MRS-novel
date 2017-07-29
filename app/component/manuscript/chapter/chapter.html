@@ -1,6 +1,5 @@
 <li class="chapter">
-  <div class="current-item" ng-href='http://mrspapers.com/#!/chapters/{{chapterCtrl.chapter._id}}'>
-
+  <div class="current-item">
     <uib-accordion>
       <div uib-accordion-group heading="{{chapterCtrl.chapter.title}}" class="title-label" is-open="status.open">
         <div class="time-label">
@@ -15,6 +14,8 @@
       </div>
     </uib-accordion>
 
-    <div id="fb-comment-box" comments-facebook class="fb-comments" page-href="http://www.mrspapers.com/#!/chapters{{chapterCtrl.chapter._id}}" data-width="600" data-numposts="5"></div>
+    <span class="">view comments</span>
+
+    <div id="fb-comments-box" comments-facebook class="fb-comments" page-href="http://www.mrspapers.com/#!/chapters/{{chapterCtrl.chapter._id}}" data-width="600" data-numposts="5"></div>
   </div>
 </li>
