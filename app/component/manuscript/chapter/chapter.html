@@ -1,5 +1,5 @@
 <li class="chapter">
-  <div class="current-item">
+  <div class="current-item" ng-href='http://mrspapers.com/#!/chapters/{{chapterCtrl.chapter._id}}'>
 
     <uib-accordion>
       <div uib-accordion-group heading="{{chapterCtrl.chapter.title}}" class="title-label" is-open="status.open">
@@ -14,5 +14,7 @@
         <div class="icon-circle-up" ng-click="status.open = !status.open; chapterCtrl.scrollUp()"></div>
       </div>
     </uib-accordion>
+
+    <div id="fb-comment-box" comments-facebook class="fb-comments" page-href="http://www.mrspapers.com/#!/chapters{{chapterCtrl.chapter._id}}" data-width="600" data-numposts="5"></div>
   </div>
 </li>
