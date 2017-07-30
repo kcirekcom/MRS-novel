@@ -14,8 +14,8 @@
       </div>
     </uib-accordion>
 
-    <span class="">view comments</span>
+    <div class="icon-bubble" ng-click="chapterCtrl.hideComments = !chapterCtrl.hideComments"></div>
 
-    <div id="fb-comments-box" comments-facebook class="fb-comments" page-href="http://www.mrspapers.com/#!/chapters/{{chapterCtrl.chapter._id}}" data-width="600" data-numposts="5"></div>
+    <div id="fb-comments-box" comments-facebook class="fb-comments" page-href="http://www.mrspapers.com/#!/chapters/{{chapterCtrl.chapter._id}}" data-numposts="5" ng-hide="chapterCtrl.hideComments"></div>
   </div>
 </li>

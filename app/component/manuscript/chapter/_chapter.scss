@@ -42,6 +42,20 @@
     cursor: pointer;
   }
 
+  .icon-bubble {
+    cursor: pointer;
+    margin-left: 11%;
+    font-size: 20px;
+  }
+
+  .fb-comments {
+    margin-left: 5.25%;
+  }
+
+  .fb-comments[data-width] {
+    width: 100%;
+  }
+
   @media (max-width: 850px) {
     .title-label, .read-more, .read-less {
       margin-left: 0;
