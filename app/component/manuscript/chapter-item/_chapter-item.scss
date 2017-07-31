@@ -41,8 +41,6 @@
     position: relative;
 
     p {
-      width: 70vw;
-      margin: 0 auto;
       text-indent: 2.5em;
       font-size: 14.5px;
       line-height: 35px;
@@ -83,15 +81,16 @@
   .left {
     float: left;
     margin-right: 5vw;
+    width: 65vw;
+  }
+
+  .update-container {
+    margin-bottom: 1.25em;
   }
 
   .icon-bubble {
     cursor: pointer;
     font-size: 20px;
-  }
-
-  .fb-comments {
-    margin-left: -0.35%;
   }
 
   @media (max-width: 850px) {

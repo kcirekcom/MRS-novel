@@ -1,6 +1,7 @@
 <li class="chapter-item">
   <div class="current-item" ng-if="!chapterItemCtrl.changeEdit.showEditChapter">
     <div class="line-top"></div>
+
     <div class="left">
       <div class="title-label">
         <span class="item-label">title:</span>
@@ -10,15 +11,19 @@
       <div class="body-label">
         <span class="item-label">body:</span>
 
-        <span ng-bind-html="chapterItemCtrl.chapter.body | limitTo: chapterItemCtrl.numLimit" ng-hide="!chapterItemCtrl.showReadMore"></span>
-        <div class="read-more" ng-hide="!chapterItemCtrl.showReadMore">
-          <div class="blur"></div>
-          <span ng-click="chapterItemCtrl.showReadMore = !chapterItemCtrl.showReadMore">read more &rarr;</span>
+        <div class="preview" ng-hide="!chapterItemCtrl.showReadMore">
+          <span ng-bind-html="chapterItemCtrl.chapter.body | limitTo: chapterItemCtrl.numLimit"></span>
+          <div class="read-more">
+            <div class="blur"></div>
+            <span ng-click="chapterItemCtrl.showReadMore = !chapterItemCtrl.showReadMore">read more &rarr;</span>
+          </div>
         </div>
 
-        <span ng-bind-html="chapterItemCtrl.trustAsHtml(chapterItemCtrl.chapter.body)" ng-hide="chapterItemCtrl.showReadMore"></span>
-        <div class="read-less" ng-hide="chapterItemCtrl.showReadMore">
-          <span ng-click="chapterItemCtrl.showReadMore = !chapterItemCtrl.showReadMore">&larr; read less</span>
+        <div class="full-view" ng-hide="chapterItemCtrl.showReadMore">
+          <span ng-bind-html="chapterItemCtrl.trustAsHtml(chapterItemCtrl.chapter.body)"></span>
+          <div class="read-less">
+            <span ng-click="chapterItemCtrl.showReadMore = !chapterItemCtrl.showReadMore">&larr; read less</span>
+          </div>
         </div>
       </div>
     </div>
@@ -36,10 +41,10 @@
       <div class="update-container" ng-if="!chapterItemCtrl.changeEdit.showEditChapter">
         <button class="btn-std" ng-click="chapterItemCtrl.changeEdit.showEditChapter = !chapterItemCtrl.showEditChapter">edit</button>
         <button class="btn-std" ng-click="chapterItemCtrl.deleteChapter()">delete</button>
-        
-        <div class="icon-bubble" ng-click="chapterItemCtrl.hideComments = !chapterItemCtrl.hideComments"></div>
-        <div id="fb-comments-box" comments-facebook class="fb-comments" page-href="http://www.mrspapers.com/#!/chapters/{{chapterItemCtrl.chapter._id}}" data-numposts="5" ng-hide="chapterItemCtrl.hideComments"></div>
       </div>
+
+      <div class="icon-bubble" ng-click="chapterItemCtrl.fbcModal.closeComments = !chapterItemCtrl.fbcModal.closeComments"></div>
+      <fb-comments ng-hide="chapterItemCtrl.fbcModal.closeComments" manuscript="chapterItemCtrl.manuscript" chapter="chapterItemCtrl.chapter" fbc-modal="chapterItemCtrl.fbcModal"></fb-comments>
     </div>
   </div>
 

@@ -16,7 +16,7 @@ module.exports = function() {
     link: function postLink(scope, elem, attrs) {
       attrs.$observe('pageHref', function (newValue) {
         var href = newValue;
-        var numposts = attrs.numposts || 5;
+        var numposts = attrs.numposts || 3;
         var width = attrs.width || 300;
         var colorscheme = attrs.colorscheme || 'light';
 

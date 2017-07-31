@@ -1,0 +1,9 @@
+<section class="fb-comments">
+  <div class="comments-modal">
+    <h3>{{fbCommentsCtrl.chapter.title}}</h3>
+
+    <div id="fb-comments-box" comments-facebook page-href="http://www.mrspapers.com/#!/chapters/{{chapterItemCtrl.chapter._id}}"></div>
+  </div>
+
+  <div class="modal-bg" ng-click="fbCommentsCtrl.fbcModal.closeComments = !fbCommentsCtrl.fbcModal.closeComments"></div>
+</section>

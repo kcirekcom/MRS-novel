@@ -17,6 +17,10 @@ function ChapterItemController($log, $window, $sce, chapterService) {
     showEditChapter: false
   };
 
+  this.fbcModal = {
+    closeComments: true
+  };
+
   this.hideComments = true;
 
   this.showReadMore = true;
