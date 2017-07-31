@@ -15,6 +15,10 @@ function ChapterController($log, $window, $sce) {
 
   this.hideComments = true;
 
+  this.fbcModal = {
+    closeComments: true
+  };
+
   this.trustAsHtml = function(body) {
     return $sce.trustAsHtml(body);
   };
