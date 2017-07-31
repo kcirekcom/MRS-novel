@@ -7,41 +7,18 @@
 
   font-family: $font-primary;
 
+  overflow: auto;
+  height: 500px;
+
   .line-top {
     border-top: 2px solid #f3f3f3;
     padding-bottom: 25px;
-  }
-
-  .blur {
-    position: absolute;
-    background: $white;
-    width: 105%;
-    height: 2em;
-    bottom: -0.5em;
-    right: -2vw;
-    -webkit-filter: blur(5px);
-  }
-
-  .read-more {
-    margin-bottom: 50px;
-  }
-
-  .read-more span, .read-less span {
-    position: absolute;
-    bottom: -1.75em;
-    font-weight: bold;
-    cursor: pointer;
-  }
-
-  .read-less span {
-    bottom: -1.75em;
   }
 
   .body-label {
     position: relative;
 
     p {
-      text-indent: 2.5em;
       font-size: 14.5px;
       line-height: 35px;
 
@@ -50,7 +27,7 @@
       }
     }
 
-    margin-bottom: 50px;
+    margin-bottom: 25px;
   }
 
   .word-count span {
@@ -61,11 +38,11 @@
   .title-label span {
     display: block;
     margin-bottom: 1.5em;
-
   }
 
   .title-title {
     font-size: 14.5px;
+    line-height: 35px;
   }
 
   .time-label span {

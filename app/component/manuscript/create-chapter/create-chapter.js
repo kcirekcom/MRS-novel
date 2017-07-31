@@ -14,11 +14,12 @@ function CreateChapterController($log, chapterService) {
 
   this.chapter = {};
 
+
   this.tinymceOptions = {
     resize: false,
-    height: 300,
     browser_spellcheck: true,
-    plugins: 'link code',
+    plugins: 'link image code autoresize',
+    autoresize_min_height: 300,
     menu: {
       file: {title: 'File', items: 'newdocument'},
       edit: {title: 'Edit', items: 'undo redo | cut copy paste pastetext | selectall'},

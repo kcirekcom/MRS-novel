@@ -11,20 +11,7 @@
       <div class="body-label">
         <span class="item-label">body:</span>
 
-        <div class="preview" ng-hide="!chapterItemCtrl.showReadMore">
-          <span ng-bind-html="chapterItemCtrl.chapter.body | limitTo: chapterItemCtrl.numLimit"></span>
-          <div class="read-more">
-            <div class="blur"></div>
-            <span ng-click="chapterItemCtrl.showReadMore = !chapterItemCtrl.showReadMore">read more &rarr;</span>
-          </div>
-        </div>
-
-        <div class="full-view" ng-hide="chapterItemCtrl.showReadMore">
-          <span ng-bind-html="chapterItemCtrl.trustAsHtml(chapterItemCtrl.chapter.body)"></span>
-          <div class="read-less">
-            <span ng-click="chapterItemCtrl.showReadMore = !chapterItemCtrl.showReadMore">&larr; read less</span>
-          </div>
-        </div>
+        <span ng-bind-html="chapterItemCtrl.trustAsHtml(chapterItemCtrl.chapter.body)"></span>
       </div>
     </div>
 
@@ -43,7 +30,7 @@
         <button class="btn-std" ng-click="chapterItemCtrl.deleteChapter()">delete</button>
       </div>
 
-      <div class="icon-bubble" ng-click="chapterItemCtrl.fbcModal.closeComments = !chapterItemCtrl.fbcModal.closeComments"></div>
+      <span class="icon-bubble" ng-click="chapterItemCtrl.fbcModal.closeComments = !chapterItemCtrl.fbcModal.closeComments"></span>
       <fb-comments ng-hide="chapterItemCtrl.fbcModal.closeComments" manuscript="chapterItemCtrl.manuscript" chapter="chapterItemCtrl.chapter" fbc-modal="chapterItemCtrl.fbcModal"></fb-comments>
     </div>
   </div>

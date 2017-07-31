@@ -21,12 +21,6 @@ function ChapterItemController($log, $window, $sce, chapterService) {
     closeComments: true
   };
 
-  this.hideComments = true;
-
-  this.showReadMore = true;
-
-  this.numLimit = 2000;
-
   this.words;
 
   this.trustAsHtml = function(body) {
