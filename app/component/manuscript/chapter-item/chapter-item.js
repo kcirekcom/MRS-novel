@@ -2,7 +2,7 @@
 
 module.exports = {
   template: require('./chapter-item.html'),
-  controller: ['$log', '$window', 'chapterService', ChapterItemController],
+  controller: ['$log', '$window', '$sce', 'chapterService', ChapterItemController],
   controllerAs: 'chapterItemCtrl',
   bindings: {
     chapter: '<',
@@ -10,25 +10,21 @@ module.exports = {
   }
 };
 
-function ChapterItemController($log, $window, chapterService) {
+function ChapterItemController($log, $window, $sce, chapterService) {
   $log.debug('ChapterItemController');
 
   this.changeEdit = {
     showEditChapter: false
   };
 
-  this.showReadMore = false;
-
-  this.numLimit = 2000;
+  this.fbcModal = {
+    closeComments: true
+  };
 
   this.words;
 
-  this.readLess = function() {
-    this.numLimit = 2000;
-  };
-
-  this.readMore = function() {
-    this.numLimit = 100000;
+  this.trustAsHtml = function(body) {
+    return $sce.trustAsHtml(body);
   };
 
   this.wordCount = function() {

@@ -9,6 +9,8 @@ module.exports = {
 function NavbarController($log, $location, $rootScope, authService) {
   $log.debug('NavbarController');
 
+  this.hideNavItems = true;
+
   this.checkPath = function() {
     let path = $location.path();
 

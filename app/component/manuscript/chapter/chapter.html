@@ -1,6 +1,5 @@
 <li class="chapter">
   <div class="current-item">
-
     <uib-accordion>
       <div uib-accordion-group heading="{{chapterCtrl.chapter.title}}" class="title-label" is-open="status.open">
         <div class="time-label">
@@ -14,5 +13,8 @@
         <div class="icon-circle-up" ng-click="status.open = !status.open; chapterCtrl.scrollUp()"></div>
       </div>
     </uib-accordion>
+
+    <span class="icon-bubble" ng-click="chapterCtrl.fbcModal.closeComments = !chapterCtrl.fbcModal.closeComments"></span>
+    <fb-comments ng-hide="chapterCtrl.fbcModal.closeComments" manuscript="chapterCtrl.manuscript" chapter="chapterCtrl.chapter" fbc-modal="chapterCtrl.fbcModal"></fb-comments>
   </div>
 </li>

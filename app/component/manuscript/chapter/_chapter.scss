@@ -29,6 +29,8 @@
     margin-bottom: 0;
 
     p {
+      width: 70vw;
+      margin: 0 auto;
       text-indent: 0;
     }
   }
@@ -40,6 +42,10 @@
     margin: 30px auto 5px;
     color: $brand-secondary;
     cursor: pointer;
+  }
+
+  .icon-bubble {
+    margin-left: 11%;
   }
 
   @media (max-width: 850px) {

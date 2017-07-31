@@ -13,6 +13,12 @@ module.exports = {
 function ChapterController($log, $window, $sce) {
   $log.debug('ChapterController');
 
+  this.hideComments = true;
+
+  this.fbcModal = {
+    closeComments: true
+  };
+
   this.trustAsHtml = function(body) {
     return $sce.trustAsHtml(body);
   };

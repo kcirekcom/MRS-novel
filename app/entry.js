@@ -46,3 +46,10 @@ context.keys().forEach(key => {
   let module = context(key);
   mrsnovel.filter(name, module);
 });
+
+context = require.context('./directive/', true, /\.js$/);
+context.keys().forEach(key => {
+  let name = camelcase(path.basename(key, '.js'));
+  let module = context(key);
+  mrsnovel.directive(name, module);
+});

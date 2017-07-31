@@ -1,32 +1,16 @@
 <section class="navbar">
-
-  <nav ng-hide="navbarCtrl.hideNavbarAdmin">
+  <nav class="in-app" ng-hide="navbarCtrl.hideNavbarAdmin">
     <h1>MRS papers</h1>
-    <ul class="primary">
-      <li>
-        <a href="">Go &#9662;</a>
-        <ul class="sub">
-          <li>
-            <span class="logout-btn" ng-click="navbarCtrl.logout()">Logout</span>
-          </li>
-        </ul>
-      </li>
-    </ul>
+    <div class="logout-btn" ng-click="navbarCtrl.logout()">Logout</div>
   </nav>
 
   <nav ng-hide="!navbarCtrl.hideNavbarAdmin">
-    <h1>MRS papers</h1>
-    <ul class="primary">
-      <li>
-        <a href="">Go &#9662;</a>
-        <ul class="sub">
-          <li><a href="/#!/summary">Summary</a></li>
-  				<li><a href="/#!/chapters">Chapters</a></li>
-          <li><a href="/#!/login">Admin Login</a></li>
-          <li><a href="https://www.instagram.com/e.f.graye/">Instagram</a></li>
-          <li><a href="https://twitter.com/efgraye">Twitter</a></li>
-        </ul>
-      </li>
+    <h1><a href="/#!/summary">MRS papers</a></h1>
+    <div class="go" ng-class="{'click': !navbarCtrl.hideNavItems}" ng-click="navbarCtrl.hideNavItems = !navbarCtrl.hideNavItems">Go &#9662;</div>
+    <ul ng-hide="navbarCtrl.hideNavItems" ng-click="navbarCtrl.hideNavItems = !navbarCtrl.hideNavItems">
+      <li><a href="/#!/summary">Summary</a></li>
+			<li><a href="/#!/chapters">Chapters</a></li>
+      <li><a href="/#!/login">Admin Login</a></li>
     </ul>
   </nav>
 </section>
