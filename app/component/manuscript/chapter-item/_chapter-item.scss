@@ -16,6 +16,10 @@
   .editor-view {
     font-size: 20px;
     font-weight: bold;
+
+    .icon-file-text2 {
+      margin-left: 10px;
+    }
   }
 
   .line-top {
@@ -23,63 +27,62 @@
     padding-bottom: 25px;
   }
 
-  .body-label {
-    position: relative;
-
-    p {
-      font-size: 14.5px;
-      line-height: 35px;
-
-      span {
-        display: inline;
-      }
-    }
-
-    margin-bottom: 25px;
-  }
-
-  .word-count span {
-    margin-left: 1vw;
-    vertical-align: middle;
-  }
-
-  .title-label span {
-    display: block;
-    margin-bottom: 1.5em;
-  }
-
-  .title-title {
-    font-size: 14.5px;
-    line-height: 35px;
-  }
-
-  .time-label span {
-    color: $brand-secondary;
-    font-weight: bold;
-    font-family: $font-primary;
-  }
-
-  .word-count button, .update-container button:nth-child(1) {
-    margin-top: 1.5em;
-  }
-
   .left {
     float: left;
     margin-right: 5vw;
     width: 65vw;
+
+    .title-label span {
+      display: block;
+      margin-bottom: 1.5em;
+    }
+
+    .title-title {
+      font-size: 14.5px;
+      line-height: 35px;
+    }
+
+    .body-label {
+      position: relative;
+
+      p {
+        font-size: 14.5px;
+        line-height: 35px;
+
+        span {
+          display: inline;
+        }
+      }
+
+      margin-bottom: 25px;
+    }
   }
 
-  .update-container {
-    margin-bottom: 1.25em;
-  }
+  .right {
 
-  .icon-bubble {
-    cursor: pointer;
-    font-size: 20px;
-  }
+    .time-label span {
+      color: $brand-secondary;
+      font-weight: bold;
+      font-family: $font-primary;
+    }
 
-  .icon-file-text2 {
-    margin-left: 10px;
+    .word-count span {
+      margin-left: 1vw;
+      vertical-align: middle;
+    }
+
+    .word-count button, .update-container button:nth-child(1) {
+      margin-top: 1.5em;
+    }
+
+    .update-container {
+      margin-bottom: 1.25em;
+    }
+
+    .icon-bubble {
+      cursor: pointer;
+      font-size: 20px;
+    }
   }
 
   @media (max-width: 850px) {
