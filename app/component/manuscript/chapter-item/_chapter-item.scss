@@ -10,6 +10,14 @@
   overflow: auto;
   height: 500px;
 
+  border-right: 20px solid #f3f3f3;
+  border-bottom: 2px solid #f3f3f3;
+
+  .editor-view {
+    font-size: 20px;
+    font-weight: bold;
+  }
+
   .line-top {
     border-top: 2px solid #f3f3f3;
     padding-bottom: 25px;
