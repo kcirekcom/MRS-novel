@@ -6,11 +6,12 @@
 
   <nav ng-hide="!navbarCtrl.hideNavbarAdmin">
     <h1><a href="/#!/summary">MRS papers</a></h1>
-    <div class="go" ng-class="{'click': !navbarCtrl.hideNavItems}" ng-click="navbarCtrl.hideNavItems = !navbarCtrl.hideNavItems">Go &#9662;</div>
-    <ul ng-hide="navbarCtrl.hideNavItems" ng-click="navbarCtrl.hideNavItems = !navbarCtrl.hideNavItems">
-      <li><a href="/#!/summary">Summary</a></li>
-			<li><a href="/#!/chapters">Chapters</a></li>
-      <li><a href="/#!/login">Admin Login</a></li>
-    </ul>
+    <div class="go">Go &#9662;
+      <ul class="nav-items">
+        <li><a href="/#!/summary">Summary</a></li>
+  			<li><a href="/#!/chapters">Chapters</a></li>
+        <li><a href="/#!/login">Admin Login</a></li>
+      </ul>
+    </div>
   </nav>
 </section>

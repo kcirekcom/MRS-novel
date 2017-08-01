@@ -36,7 +36,7 @@
       text-align: left;
       position: absolute;
       right: 15%;
-      top: 65px;
+      top: 64.5px;
       z-index: 200;
       border-top: none;
       box-shadow: 2px 2px 8px $black;
@@ -54,11 +54,19 @@
       float: right;
       margin-right: $gutter-lg + 5%;
       padding: 1.5em;
-    }
 
-    .click {
-      background: $brand-primary;
-      color: $black;
+      .nav-items {
+        display: none;
+      }
+
+      &:hover {
+        .nav-items {
+          display: block;
+        }
+
+        background: $brand-primary;
+        color: $black;
+      }
     }
   }
 
@@ -76,7 +84,7 @@
 
       &:hover {
         background: $brand-primary;
-        color: #666;
+        color: $black;
       }
     }
   }
