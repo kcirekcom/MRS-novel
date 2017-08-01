@@ -1,5 +1,4 @@
 <section class="edit-c">
-  <div class="line-top"></div>
   <form class="edit-chapter"
     name="editChapterForm"
     ng-submit="editChapterCtrl.updateChapter()"
@@ -16,8 +15,5 @@
         <textarea ui-tinymce="editChapterCtrl.tinymceOptions" ng-model="editChapterCtrl.chapter.body"></textarea>
       </fieldset>
     </div>
-
-    <button type="submit" class="btn-std">update</button>
-    <button class="btn-std" ng-click="editChapterCtrl.changeEdit.showEditChapter = !editChapterCtrl.changeEdit.showEditChapter">cancel</button>
   </form>
 </section>

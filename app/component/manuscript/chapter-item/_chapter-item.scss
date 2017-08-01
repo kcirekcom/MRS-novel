@@ -14,22 +14,55 @@
   border-bottom: 2px solid #f3f3f3;
 
   .editor-view {
-    font-size: 20px;
-    font-weight: bold;
+    position: sticky;
+    position: -webkit-sticky;
+    position: -moz-sticky;
+    position: -ms-sticky;
+    top: 0;
+
+    z-index: 1000;
+    background: $white;
+    border-bottom: 2px solid #f3f3f3;
+    padding-bottom: 1em;
+
+    .header-span {
+      font-size: 20px;
+      font-weight: bold;
+    }
 
     .icon-file-text2 {
+      font-size: 20px;
       margin-left: 10px;
+    }
+
+    .editor-container-top {
+      float: right;
+      margin-right: 6vw;
     }
   }
 
   .line-top {
     border-top: 2px solid #f3f3f3;
-    padding-bottom: 25px;
+
+    position: sticky;
+    position: -webkit-sticky;
+    position: -moz-sticky;
+    position: -ms-sticky;
+    top: 0;
+  }
+
+  .no-line {
+    display: none;
+  }
+
+  .current-item {
+    overflow: auto;
+    height: 100%;
+    padding-top: 1em;
   }
 
   .left {
     float: left;
-    margin-right: 5vw;
     width: 65vw;
 
     .title-label span {
@@ -59,6 +92,14 @@
   }
 
   .right {
+    position: sticky;
+    position: -webkit-sticky;
+    position: -moz-sticky;
+    position: -ms-sticky;
+    top: 0;
+
+    float: right;
+    margin-right: 2vw;
 
     .time-label span {
       color: $brand-secondary;
@@ -86,8 +127,32 @@
   }
 
   @media (max-width: 850px) {
+    .current-item {
+      padding-top: 0;
+    }
+
     .right {
-      clear: both;
+      float: none;
+      width: 100%;
+      background: $white;
+      padding: 1em 0;
+      z-index: 1000;
+
+      .word-count {
+        display: inline;
+
+        span {
+          margin-left: 0;
+        }
+      }
+
+      .update-container {
+        display: inline;
+      }
+
+      .icon-bubble {
+        vertical-align: middle;
+      }
     }
 
     .body-label {

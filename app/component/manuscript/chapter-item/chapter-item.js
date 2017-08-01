@@ -33,6 +33,18 @@ function ChapterItemController($log, $window, $sce, chapterService) {
     this.words = str.split(/\s+/).length;
   };
 
+  this.updateChapter = function() {
+    $log.debug('editChapterCtrl.updateChapter()');
+
+    chapterService.updateChapter(this.manuscript, this.chapter)
+    .then(() => {
+      $log.log('chapter updated');
+    })
+    .catch(err => {
+      $log.error(err.message);
+    });
+  };
+
   this.deleteChapter = function() {
     $log.debug('chapterItemCtrl.deleteChapter()');
 
