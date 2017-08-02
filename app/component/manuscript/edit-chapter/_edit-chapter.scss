@@ -1,8 +1,28 @@
 .edit-c {
   @extend .create-chapter;
-  margin: 1em auto 0;
+  margin: 0;
+  padding-top: 1em;
+  width: 85vw;
 
   .edit-chapter-container {
     @extend .chapter-form;
+  }
+
+  .editor-container {
+    position: sticky;
+    position: -webkit-sticky;
+    position: -moz-sticky;
+    position: -ms-sticky;
+    top: 0;
+  }
+
+  @media (max-width: 850px) {
+    .editor-container {
+      display: none;
+    }
+
+    .edit-chapter-container {
+      width: 85vw;
+    }
   }
 }

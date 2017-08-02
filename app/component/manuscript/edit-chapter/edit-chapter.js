@@ -7,7 +7,8 @@ module.exports = {
   bindings: {
     chapter: '<',
     manuscript: '<',
-    changeEdit: '='
+    changeEdit: '=',
+    updateChapter: '&'
   }
 };
 
@@ -26,17 +27,5 @@ function EditChapterController($log, chapterService) {
       view: {title: 'View', items: 'visualaid'},
       tools: {title: 'Tools', items: 'code'}
     }
-  };
-
-  this.updateChapter = function() {
-    $log.debug('editChapterCtrl.updateChapter()');
-
-    chapterService.updateChapter(this.manuscript, this.chapter)
-    .then(() => {
-      $log.log('chapter updated');
-    })
-    .catch(err => {
-      $log.error(err.message);
-    });
   };
 }

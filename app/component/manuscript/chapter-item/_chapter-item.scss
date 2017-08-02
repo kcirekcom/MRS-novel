@@ -13,79 +13,164 @@
   border-right: 20px solid #f3f3f3;
   border-bottom: 2px solid #f3f3f3;
 
+  &:hover {
+    border-right: 20px solid $brand-secondary;
+    border-bottom: 2px solid $brand-secondary;
+  }
+
+  &:hover .editor-view,  &:hover .line-top {
+    border-bottom: 2px solid $brand-secondary;
+  }
+
   .editor-view {
-    font-size: 20px;
-    font-weight: bold;
+    position: sticky;
+    position: -webkit-sticky;
+    position: -moz-sticky;
+    position: -ms-sticky;
+    top: 0;
+
+    z-index: 1000;
+    background: $white;
+    border-bottom: 2px solid #f3f3f3;
+    padding-bottom: 1em;
+
+    .header-span {
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .icon-file-text2 {
+      font-size: 20px;
+      margin-left: 10px;
+    }
+
+    .editor-container-top {
+      float: right;
+      margin-right: 6vw;
+    }
   }
 
   .line-top {
-    border-top: 2px solid #f3f3f3;
-    padding-bottom: 25px;
+    border-bottom: 2px solid #f3f3f3;
+
+    position: sticky;
+    position: -webkit-sticky;
+    position: -moz-sticky;
+    position: -ms-sticky;
+    top: 0;
   }
 
-  .body-label {
-    position: relative;
-
-    p {
-      font-size: 14.5px;
-      line-height: 35px;
-
-      span {
-        display: inline;
-      }
-    }
-
-    margin-bottom: 25px;
+  .no-line {
+    display: none;
   }
 
-  .word-count span {
-    margin-left: 1vw;
-    vertical-align: middle;
-  }
-
-  .title-label span {
-    display: block;
-    margin-bottom: 1.5em;
-  }
-
-  .title-title {
-    font-size: 14.5px;
-    line-height: 35px;
-  }
-
-  .time-label span {
-    color: $brand-secondary;
-    font-weight: bold;
-    font-family: $font-primary;
-  }
-
-  .word-count button, .update-container button:nth-child(1) {
-    margin-top: 1.5em;
+  .current-item {
+    overflow: auto;
+    height: 100%;
+    padding-top: 1em;
   }
 
   .left {
     float: left;
-    margin-right: 5vw;
     width: 65vw;
+
+    .title-label span {
+      display: block;
+      margin-bottom: 1.5em;
+    }
+
+    .title-title {
+      font-size: 14.5px;
+      line-height: 35px;
+    }
+
+    .body-label {
+      position: relative;
+
+      p {
+        font-size: 14.5px;
+        line-height: 35px;
+
+        span {
+          display: inline;
+        }
+      }
+
+      margin-bottom: 25px;
+    }
   }
 
-  .update-container {
-    margin-bottom: 1.25em;
+  .right {
+    position: sticky;
+    position: -webkit-sticky;
+    position: -moz-sticky;
+    position: -ms-sticky;
+    top: 0;
+
+    float: right;
+    margin-right: 2vw;
+
+    .time-label span {
+      color: $brand-secondary;
+      font-weight: bold;
+      font-family: $font-primary;
+    }
+
+    .word-count span {
+      margin-left: 1vw;
+      vertical-align: middle;
+    }
+
+    .word-count button, .update-container button:nth-child(1) {
+      margin-top: 1.5em;
+    }
+
+    .update-container {
+      margin-bottom: 1.25em;
+    }
+
+    .icon-bubble {
+      cursor: pointer;
+      font-size: 20px;
+    }
   }
 
-  .icon-bubble {
-    cursor: pointer;
-    font-size: 20px;
+  .unstuck {
+    position: initial;
   }
 
   @media (max-width: 850px) {
+    .current-item {
+      padding-top: 0;
+    }
+
     .right {
-      clear: both;
+      float: none;
+      width: 100%;
+      background: $white;
+      padding: 1em 0;
+      z-index: 500;
+
+      .word-count {
+        display: inline;
+
+        span {
+          margin-left: 0;
+        }
+      }
+
+      .update-container {
+        display: inline;
+      }
+
+      .icon-bubble {
+        vertical-align: middle;
+      }
     }
 
     .body-label {
       p {
-        width: 90vw;
+        width: 85vw;
       }
     }
   }

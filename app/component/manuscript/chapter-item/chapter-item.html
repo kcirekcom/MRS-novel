@@ -1,22 +1,18 @@
 <li class="chapter-item">
-  <span class="editor-view" ng-if="chapterItemCtrl.changeEdit.showEditChapter">Editor View</span>
-  <div class="current-item" ng-if="!chapterItemCtrl.changeEdit.showEditChapter">
-    <div class="line-top"></div>
+  <div class="editor-view" ng-if="chapterItemCtrl.changeEdit.showEditChapter">
+    <span class="header-span">Editor View</span>
+    <span class="icon-file-text2"></span>
 
-    <div class="left">
-      <div class="title-label">
-        <span class="item-label">title:</span>
-        <span class="title-title">{{chapterItemCtrl.chapter.title}}</span>
-      </div>
-
-      <div class="body-label">
-        <span class="item-label">body:</span>
-
-        <span ng-bind-html="chapterItemCtrl.trustAsHtml(chapterItemCtrl.chapter.body)"></span>
-      </div>
+    <div class="editor-container-top">
+      <button class="btn-std" ng-click="chapterItemCtrl.updateChapter()">update</button>
+      <button class="btn-std" ng-click="chapterItemCtrl.changeEdit.showEditChapter = !chapterItemCtrl.changeEdit.showEditChapter">cancel</button>
     </div>
+  </div>
 
-    <div class="right">
+  <div class="line-top" ng-class="{'no-line': chapterItemCtrl.changeEdit.showEditChapter}"></div>
+
+  <div class="current-item" ng-if="!chapterItemCtrl.changeEdit.showEditChapter">
+    <div class="right" ng-class="{'unstuck': !chapterItemCtrl.fbcModal.closeComments}">
       <div class="time-label">
         <span>{{chapterItemCtrl.chapter.timestamp | date: 'MMM d, y h:mm a'}}</span>
       </div>
@@ -34,7 +30,19 @@
       <span class="icon-bubble" ng-click="chapterItemCtrl.fbcModal.closeComments = !chapterItemCtrl.fbcModal.closeComments"></span>
       <fb-comments ng-hide="chapterItemCtrl.fbcModal.closeComments" manuscript="chapterItemCtrl.manuscript" chapter="chapterItemCtrl.chapter" fbc-modal="chapterItemCtrl.fbcModal"></fb-comments>
     </div>
+
+    <div class="left">
+      <div class="title-label">
+        <span class="item-label">title:</span>
+        <span class="title-title">{{chapterItemCtrl.chapter.title}}</span>
+      </div>
+
+      <div class="body-label">
+        <span class="item-label">body:</span>
+        <span ng-bind-html="chapterItemCtrl.trustAsHtml(chapterItemCtrl.chapter.body)"></span>
+      </div>
+    </div>
   </div>
 
-  <edit-chapter ng-if="chapterItemCtrl.changeEdit.showEditChapter" manuscript="chapterItemCtrl.manuscript" chapter="chapterItemCtrl.chapter" change-edit="chapterItemCtrl.changeEdit"></edit-chapter>
+  <edit-chapter ng-if="chapterItemCtrl.changeEdit.showEditChapter" manuscript="chapterItemCtrl.manuscript" chapter="chapterItemCtrl.chapter" change-edit="chapterItemCtrl.changeEdit" update-chapter="chapterItemCtrl.updateChapter()"></edit-chapter>
 </li>
