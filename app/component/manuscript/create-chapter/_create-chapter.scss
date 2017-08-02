@@ -8,13 +8,26 @@
     width: 65vw;
     margin: 0 auto;
 
-    margin-right: 5vw;
+
     margin-bottom: 2em;
+
+  }
+
+  .add-chapter {
+    width: 100px;
+    float: right;
+    text-align: right;
+    margin-right: 10vw;
   }
 
   @media (max-width: 850px) {
     .chapter-form {
       width: 90vw;
+    }
+
+    .add-chapter {
+      float: none;
+      text-align: left;
     }
   }
 }
