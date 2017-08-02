@@ -7,6 +7,8 @@
   overflow: hidden;
   height: auto;
 
+  margin: 0 auto;
+
   &:hover {
     border: none;
   }
@@ -18,12 +20,18 @@
 
   .time-label, .title-label {
     margin-left: 0;
-    margin-bottom: 1em;
+    margin-bottom: 10px;
     line-height: 35px;
   }
 
   .time-label {
     margin-left: 11%;
+
+    span {
+      color: $brand-secondary;
+      font-weight: bold;
+      font-family: $font-primary;
+    }
   }
 
   .title-label span {

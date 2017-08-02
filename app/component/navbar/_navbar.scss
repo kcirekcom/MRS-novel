@@ -2,7 +2,7 @@
   font-family: 'Delius', cursive;
 
   nav {
-    height: 4em;
+    height: 65px;
     background: linear-gradient(top,  $brand-tertiary, $brand-secondary);
     background: -ms-linear-gradient(top, $brand-tertiary, $brand-secondary);
     background: -webkit-gradient(linear, left top, left bottom, from($brand-tertiary), to($brand-secondary));
@@ -12,7 +12,7 @@
     h1 {
       color: $brand-primary;
       float: left;
-      margin-top: 1.5em;
+      margin-top: 25px;
       margin-left: $gutter-lg + 5%;
 
       a {
@@ -44,7 +44,7 @@
 
       li {
         float: left;
-        padding: 1em 1.5em;
+        padding: 15px 25px;
       }
     }
 
@@ -53,7 +53,7 @@
       color: $brand-primary;
       float: right;
       margin-right: $gutter-lg + 5%;
-      padding: 1.5em;
+      padding: 24.5px;
 
       .nav-items {
         display: none;
@@ -80,7 +80,7 @@
       color: $brand-primary;
       float: right;
       margin-right: $gutter-std;
-      padding: 1.5em;
+      padding: 24.5px;
 
       &:hover {
         background: $brand-primary;

@@ -2,7 +2,7 @@
 
 .item-label {
   display: block;
-  margin-bottom: 1.5em;
+  margin-bottom: 25px;
   font-weight: bold;
   font-family: $font-primary;
 }
@@ -28,15 +28,15 @@ button {
 h2 {
   clear: both;
   margin-left: 5vw;
-  margin-bottom: 1.15em;
-  font-size: 1.5em;
+  margin-bottom: 20px;
+  font-size: 25px;
   font-weight: bold;
   font-family: 'Delius', cursive;
 }
 
 h3 {
   @extend h2;
-  font-size: 1.25em;
+  font-size: 20px;
   font-style: oblique;
 }
 
@@ -50,7 +50,7 @@ h3 {
   font-family: Arial, Helvetica, sans-serif;
   border: solid 0.1vw #95989a;
   box-sizing: border-box;
-  margin-bottom: 1.5em;
+  margin-bottom: 25px;
 
   &:focus {
     background: $brand-primary;
