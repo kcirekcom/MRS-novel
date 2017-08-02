@@ -3,7 +3,7 @@
   clear: both;
 
   width: 90vw;
-  margin: 2em auto;
+  margin: 35px auto;
 
   font-family: $font-primary;
 
@@ -32,7 +32,7 @@
     z-index: 1000;
     background: $white;
     border-bottom: 2px solid #f3f3f3;
-    padding-bottom: 1em;
+    padding-bottom: 15px;
 
     .header-span {
       font-size: 20px;
@@ -67,7 +67,7 @@
   .current-item {
     overflow: auto;
     height: 100%;
-    padding-top: 1em;
+    padding-top: 15px;
   }
 
   .left {
@@ -76,7 +76,7 @@
 
     .title-label span {
       display: block;
-      margin-bottom: 1.5em;
+      margin-bottom: 25px;
     }
 
     .title-title {
@@ -122,11 +122,11 @@
     }
 
     .word-count button, .update-container button:nth-child(1) {
-      margin-top: 1.5em;
+      margin-top: 20px;
     }
 
     .update-container {
-      margin-bottom: 1.25em;
+      margin-bottom: 20px;
     }
 
     .icon-bubble {
@@ -148,7 +148,7 @@
       float: none;
       width: 100%;
       background: $white;
-      padding: 1em 0;
+      padding: 20px 0;
       z-index: 500;
 
       .word-count {
