@@ -126,8 +126,8 @@
     }
   }
 
-  .right-not-sticky {
-    position: relative;
+  .unstuck {
+    position: initial;
   }
 
   @media (max-width: 850px) {
@@ -140,7 +140,7 @@
       width: 100%;
       background: $white;
       padding: 1em 0;
-      z-index: 1000;
+      z-index: 500;
 
       .word-count {
         display: inline;
