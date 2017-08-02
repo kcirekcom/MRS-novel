@@ -12,7 +12,7 @@
   <div class="line-top" ng-class="{'no-line': chapterItemCtrl.changeEdit.showEditChapter}"></div>
 
   <div class="current-item" ng-if="!chapterItemCtrl.changeEdit.showEditChapter">
-    <div class="right">
+    <div class="right" ng-class="{'right-not-sticky': !chapterItemCtrl.fbcModal.closeComments}">
       <div class="time-label">
         <span>{{chapterItemCtrl.chapter.timestamp | date: 'MMM d, y h:mm a'}}</span>
       </div>

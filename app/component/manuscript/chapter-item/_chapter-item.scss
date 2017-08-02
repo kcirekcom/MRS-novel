@@ -126,6 +126,10 @@
     }
   }
 
+  .right-not-sticky {
+    position: relative;
+  }
+
   @media (max-width: 850px) {
     .current-item {
       padding-top: 0;
