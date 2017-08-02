@@ -13,6 +13,15 @@
   border-right: 20px solid #f3f3f3;
   border-bottom: 2px solid #f3f3f3;
 
+  &:hover {
+    border-right: 20px solid $brand-secondary;
+    border-bottom: 2px solid $brand-secondary;
+  }
+
+  &:hover .editor-view,  &:hover .line-top {
+    border-bottom: 2px solid $brand-secondary;
+  }
+
   .editor-view {
     position: sticky;
     position: -webkit-sticky;
@@ -42,7 +51,7 @@
   }
 
   .line-top {
-    border-top: 2px solid #f3f3f3;
+    border-bottom: 2px solid #f3f3f3;
 
     position: sticky;
     position: -webkit-sticky;
