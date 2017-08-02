@@ -34,5 +34,14 @@
     background: -webkit-linear-gradient(left, $white, $transparent-white, $white);
     background: -moz-linear-gradient(left, $white, $transparent-white, $white);
     background: -ms-linear-gradient(left, $white, $transparent-white, $white);
+
+    &:hover {
+      box-sizing: border-box;
+      border: 8px solid $exit;
+      transition: all 0.5s ease;
+      -webkit-transition: all 0.5s ease;
+      -moz-transition: all 0.5s ease;
+      -ms-transition: all 0.5s ease;
+    }
   }
 }
