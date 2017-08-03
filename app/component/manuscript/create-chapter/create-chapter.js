@@ -14,7 +14,6 @@ function CreateChapterController($log, chapterService) {
 
   this.chapter = {};
 
-
   this.tinymceOptions = {
     resize: false,
     browser_spellcheck: true,
@@ -24,7 +23,6 @@ function CreateChapterController($log, chapterService) {
       file: {title: 'File', items: 'newdocument'},
       edit: {title: 'Edit', items: 'undo redo | cut copy paste pastetext | selectall'},
       insert: {title: 'Insert', items: 'link media | template hr'},
-      view: {title: 'View', items: 'visualaid'},
       tools: {title: 'Tools', items: 'code'}
     }
   };

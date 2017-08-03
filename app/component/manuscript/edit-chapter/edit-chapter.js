@@ -24,7 +24,6 @@ function EditChapterController($log, chapterService) {
       file: {title: 'File', items: 'newdocument'},
       edit: {title: 'Edit', items: 'undo redo | cut copy paste pastetext | selectall'},
       insert: {title: 'Insert', items: 'link media | template hr'},
-      view: {title: 'View', items: 'visualaid'},
       tools: {title: 'Tools', items: 'code'}
     }
   };
