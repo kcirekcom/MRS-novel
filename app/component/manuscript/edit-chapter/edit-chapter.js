@@ -18,7 +18,7 @@ function EditChapterController($log, chapterService) {
   this.tinymceOptions = {
     resize: false,
     browser_spellcheck: true,
-    plugins: 'link image code autoresize',
+    plugins: 'link code autoresize',
     autoresize_min_height: 300,
     menu: {
       file: {title: 'File', items: 'newdocument'},
