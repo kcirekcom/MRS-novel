@@ -8,21 +8,9 @@
     @extend .chapter-form;
   }
 
-  .editor-container {
-    position: sticky;
-    position: -webkit-sticky;
-    position: -moz-sticky;
-    position: -ms-sticky;
-    top: 0;
-  }
-
   @media (max-width: 850px) {
-    .editor-container {
-      display: none;
-    }
-
-    .edit-chapter-container {
-      width: 85vw;
+    .edit-chapter-container fieldset {
+      width: 82.5vw;
     }
   }
 }

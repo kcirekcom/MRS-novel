@@ -6,7 +6,7 @@
     margin-bottom: 20px;
   }
 
-  .chapter-form {
+  .chapter-form fieldset {
     float: left;
     width: 65vw;
     margin: 0 auto;
@@ -21,7 +21,7 @@
   }
 
   @media (max-width: 850px) {
-    .chapter-form {
+    .chapter-form fieldset {
       width: 90vw;
     }
 

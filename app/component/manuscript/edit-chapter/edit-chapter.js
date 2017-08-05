@@ -18,13 +18,12 @@ function EditChapterController($log, chapterService) {
   this.tinymceOptions = {
     resize: false,
     browser_spellcheck: true,
-    plugins: 'link image code autoresize',
+    plugins: 'link code autoresize',
     autoresize_min_height: 300,
     menu: {
       file: {title: 'File', items: 'newdocument'},
       edit: {title: 'Edit', items: 'undo redo | cut copy paste pastetext | selectall'},
       insert: {title: 'Insert', items: 'link media | template hr'},
-      view: {title: 'View', items: 'visualaid'},
       tools: {title: 'Tools', items: 'code'}
     }
   };
