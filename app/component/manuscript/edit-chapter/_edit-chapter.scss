@@ -6,6 +6,10 @@
 
   .edit-chapter-container {
     @extend .chapter-form;
+
+    fieldset {
+      margin-bottom: 0;
+    }
   }
 
   @media (max-width: 850px) {
