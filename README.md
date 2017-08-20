@@ -1,2 +1,2 @@
 # MRS-novel
-Publication platform for MRS novel
+Publication platform for MRS papers
