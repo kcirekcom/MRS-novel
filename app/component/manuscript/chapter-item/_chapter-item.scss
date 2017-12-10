@@ -151,7 +151,7 @@
         }
       }
 
-      &:hover .tooltip-text {
+      &:hover .tooltip-text, &:active .tooltip-text {
         visibility: visible;
         opacity: 1;
       }
@@ -189,10 +189,7 @@
 
       .word-count {
         display: inline;
-
-        span {
-          margin-left: 0;
-        }
+        margin-right: 5px;
       }
 
       .update-container {
