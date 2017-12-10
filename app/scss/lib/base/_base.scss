@@ -25,7 +25,7 @@ button {
 
 //HEADERS
 
-h1, .h1, h2, h3 {
+h1, h2, h3 {
   clear: both;
   margin-left: 5vw;
   margin-bottom: 20px;
@@ -39,7 +39,7 @@ h2 {
   font-style: oblique;
 }
 
-h3 {
+h3, .h1 {
   font-size: 16px;
 }
 
