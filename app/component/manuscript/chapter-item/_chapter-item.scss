@@ -151,7 +151,9 @@
         }
       }
 
-      &:hover .tooltip-text, .tooltip-text[aria-hidden="false"], &:active .tooltip-text {
+      &:hover .tooltip-text,
+      .tooltip-text[aria-hidden="false"],
+      &:active .tooltip-text {
         visibility: visible;
         opacity: 1;
       }
