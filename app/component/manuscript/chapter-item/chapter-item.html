@@ -18,8 +18,8 @@
       </div>
 
       <div class="word-count">
-        <span ng-mouseover="chapterItemCtrl.wordCount()">word count</span>
-        <span class="tooltip-text">{{chapterItemCtrl.words}}</span>
+        <span aria-describedby="word-count-tooltip" ng-mouseover="chapterItemCtrl.wordCount()">word count</span>
+        <span id="word-count-tooltip" class="tooltip-text" role="tooltip-text">{{chapterItemCtrl.words}}</span>
       </div>
 
       <div class="update-container" ng-if="!chapterItemCtrl.changeEdit.showEditChapter">
