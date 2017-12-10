@@ -25,18 +25,18 @@ button {
 
 //HEADERS
 
-h2 {
+h1 {
   clear: both;
   margin-left: 5vw;
   margin-bottom: 20px;
-  font-size: 25px;
+  font-size: 20px;
   font-weight: bold;
   font-family: 'Delius', cursive;
 }
 
-h3 {
-  @extend h2;
-  font-size: 20px;
+h2 {
+  @extend h1;
+  font-size: 15px;
   font-style: oblique;
 }
 
