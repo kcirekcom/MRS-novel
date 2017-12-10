@@ -30,7 +30,7 @@
     "angular-ui-tinymce": "0.0.18",
     "babel-core": "^6.24.1",
     "babel-loader": "^7.0.0",
-    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-env": "^1.6.1",
     "bootstrap-sass": "^3.3.7",
     "camelcase": "^4.1.0",
     "clean-webpack-plugin": "^0.1.16",
