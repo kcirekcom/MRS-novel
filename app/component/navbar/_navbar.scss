@@ -9,7 +9,7 @@
     background: -moz-linear-gradient(top, $brand-tertiary, $brand-secondary);
     box-shadow: 0px 2px 8px $black;
 
-    .h1 {
+    h1 {
       color: $brand-primary;
       float: left;
       margin-top: 25px;
@@ -71,7 +71,7 @@
   }
 
   .in-app {
-    .h1 {
+    h1 {
       margin-left: $gutter-std;
     }
 
